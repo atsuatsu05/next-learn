@@ -19,7 +19,7 @@ export default function Page() {
     const favoriteFoods: string[] = ["ドーナツ", "お団子", "焼肉"];
     const favoriteManga: string[] = ["スラムダンク", "MAJOR", "コナン"];
     return (
-        <>
+        <div className={styles.contents}>
             <h1 className={styles["h1-title"]}>自己紹介</h1>
             <p>
                 私の名前は{fullName}です。
@@ -28,16 +28,16 @@ export default function Page() {
                 <br />
                 年齢は{age !== null ? `${age}歳` : "非公開"}です。
             </p>
-            <h2>趣味・特技</h2>
-            <dl>
-                <dt>趣味</dt>
-                <dd>{hobbiesSkills.hobbies}</dd>
+            <h2 className={styles["h2-title"]}>趣味・特技</h2>
+            <dl className={styles.dl}>
+                <dt className={styles.dt}>趣味</dt>
+                <dd className={styles.dd}>{hobbiesSkills.hobbies}</dd>
             </dl>
-            <dl>
-                <dt>特技</dt>
-                <dd>{hobbiesSkills.skills}</dd>
+            <dl className={styles.dl}>
+                <dt className={styles.dt}>特技</dt>
+                <dd className={styles.dd}>{hobbiesSkills.skills}</dd>
             </dl>
-            <h2>好きな食べ物</h2>
+            <h2 className={styles["h2-title"]}>好きな食べ物</h2>
             <ul>
                 {favoriteFoods.map((item, i) => (
                     <li key={i}>{item}</li>
@@ -49,10 +49,10 @@ export default function Page() {
                     <li key={i}>{item}</li>
                 ))}
             </ol>
-            <h2>画像の練習</h2>
+            <h2 className={styles["h2-title"]}>画像の練習</h2>
             <Image src="/dummy.png" width={150} height={150} alt="" priority />
-            <h2>リンクの練習</h2>
+            <h2 className={styles["h2-title"]}>リンクの練習</h2>
             <Link href="/">トップページ</Link>
-        </>
+        </div>
     );
 }
