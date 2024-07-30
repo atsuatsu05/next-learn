@@ -52,7 +52,9 @@ export default function Page() {
             <h2 className={styles["h2-title"]}>画像の練習</h2>
             <Image src="/dummy.png" width={150} height={150} alt="" priority />
             <h2 className={styles["h2-title"]}>リンクの練習</h2>
-            <Link href="/">トップページ</Link>
+            <Link href="/" className={styles.link}>
+                トップページ
+            </Link>
         </div>
     );
 }

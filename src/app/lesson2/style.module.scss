@@ -28,3 +28,10 @@
 .dd {
     margin: 0;
 }
+.link {
+    text-decoration: none;
+    color: red;
+    .hover {
+        text-decoration: underline;
+    }
+}
