@@ -19,7 +19,7 @@ export default function RootLayout({
                 <span className={styles["hm-top"]}></span>
                 <span className={styles["hm-bottom"]}></span>
             </div>
-            <body>{children}</body>
+            <div>{children}</div>
 
             <div className={styles.footer}>
                 <nav className={styles.nav}>

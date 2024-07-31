@@ -1,0 +1,9 @@
+@import "@/styles/mixins";
+
+.link {
+    text-decoration: none;
+    color: red;
+    .hover {
+        text-decoration: underline;
+    }
+}

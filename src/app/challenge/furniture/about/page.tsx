@@ -73,7 +73,7 @@ export default function Page() {
     return (
         <div>
             <div>
-                <h3>Products</h3>
+                <p>Products</p>
                 <div>
                     {furnitureImages.map((item, i) => (
                         <div key={i}>
