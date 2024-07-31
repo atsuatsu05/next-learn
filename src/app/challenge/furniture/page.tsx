@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <>
+        <div className={styles.topContainer}>
             <Image
                 src="/challenge/furniture/main.png"
                 width={1000}
@@ -72,42 +72,6 @@ export default function Page() {
             >
                 View More
             </Link>
-            <div className={styles.footer}>
-                <nav className={styles.nav}>
-                    <ul className={styles.ul}>
-                        <li className={styles.li}>
-                            <Link
-                                href="/challenge/furniture/products"
-                                className={styles.link}
-                            >
-                                PRODUCTS
-                            </Link>
-                        </li>
-                        <li className={styles.li}>
-                            <Link
-                                href="/challenge/furniture/about"
-                                className={styles.link}
-                            >
-                                ABOUT
-                            </Link>
-                        </li>
-                        <li className={styles.li}>
-                            <Link
-                                href="/challenge/furniture/company"
-                                className={styles.link}
-                            >
-                                COMPANY
-                            </Link>
-                        </li>
-                        <li className={styles.li}>
-                            <Link href="#" className={styles.link}>
-                                CONTACT
-                            </Link>
-                        </li>
-                    </ul>
-                </nav>
-                <p className={styles.copyRight}>© Furniture Design</p>
-            </div>
-        </>
+        </div>
     );
 }

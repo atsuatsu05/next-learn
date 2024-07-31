@@ -1,8 +1,8 @@
 @import "@/styles/mixins";
 .container {
     max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
+    padding: 0 0 0 40px;
+    // text-align: center;
     position: relative;
 }
 
@@ -30,6 +30,10 @@
     position: absolute;
     top: 35px;
     right: 20px;
+}
+
+.topContainer {
+    text-align: center;
 }
 
 .h2-title {
@@ -86,7 +90,6 @@
     }
     display: flex;
     justify-content: space-between;
-    margin: 0 1em;
 }
 
 .nav {

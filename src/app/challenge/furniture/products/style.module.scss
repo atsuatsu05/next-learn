@@ -1,0 +1,40 @@
+@import "@/styles/mixins";
+.productsContainer {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+.p {
+    text-align: left;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    margin: 10px;
+}
+
+.text {
+    text-align: left;
+    color: #333;
+    text-decoration: none;
+}
+
+.pagination {
+    color: #333;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.pageLink {
+    color: #333;
+    margin: 40px 0 120px 40px;
+}
+.link {
+    color: #333;
+    text-decoration: none;
+}
