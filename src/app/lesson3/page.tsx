@@ -9,6 +9,8 @@ import {
     DefinitionList,
     List,
     Contents,
+    Counter,
+    Toggle,
 } from "@/components/lesson3"; //tsconfigで定めてる
 
 export const metadata: Metadata = {
@@ -50,6 +52,12 @@ export default function Page() {
             <Link href="/" className={styles.link}>
                 トップページ
             </Link>
+            <SectionTitle>カウンター</SectionTitle>
+            <Counter />
+            <SectionTitle>トグル</SectionTitle>
+            <Toggle title="トグルボタン" opened={true}>
+                コンテンツ
+            </Toggle>
         </Contents>
     );
 }

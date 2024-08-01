@@ -1,6 +1,7 @@
 import React from "react"; //nodeモジュールから読んできている
 
 type TextProps = {
+    align?: "right" | "center" | "left";
     children: React.ReactNode;
 };
 

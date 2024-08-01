@@ -5,6 +5,7 @@ module.exports = {
         "plugin:@typescript-eslint/recommended",
         "next/core-web-vitals",
         "prettier",
+        "plugin:storybook/recommended"
     ],
     parser: "@typescript-eslint/parser",
     parserOptions: {
