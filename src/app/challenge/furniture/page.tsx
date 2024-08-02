@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./style.module.scss";
+import { Title } from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "Top",
@@ -18,7 +19,7 @@ export default function Page() {
                 alt=""
                 className={styles.main}
             />
-            <h2 className={styles["h2-title"]}>About</h2>
+            <Title>About</Title>
             <p className={styles.text}>
                 テキストテキストテキストテキストテキストテキストテキスト
                 <br />

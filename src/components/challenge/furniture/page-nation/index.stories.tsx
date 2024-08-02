@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Contents } from "./";
+import { PageNation } from ".";
 
 const meta = {
-    title: "components/lesson3/contents", // Storybookのサイドパネルツリーを設定
-    component: Contents, // コンポーネントを登録
+    title: "components/challenge/furniture/page-nation", // Storybookのサイドパネルツリーを設定
+    component: PageNation, // コンポーネントを登録
     tags: ["autodocs"],
-} satisfies Meta<typeof Contents>;
+} satisfies Meta<typeof PageNation>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

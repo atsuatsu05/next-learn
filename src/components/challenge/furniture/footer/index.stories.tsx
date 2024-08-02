@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Contents } from "./";
+import { Footer } from ".";
 
 const meta = {
-    title: "components/lesson3/contents", // Storybookのサイドパネルツリーを設定
-    component: Contents, // コンポーネントを登録
+    title: "components/challenge/furniture/footer", // Storybookのサイドパネルツリーを設定
+    component: Footer, // コンポーネントを登録
     tags: ["autodocs"],
-} satisfies Meta<typeof Contents>;
+} satisfies Meta<typeof Footer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

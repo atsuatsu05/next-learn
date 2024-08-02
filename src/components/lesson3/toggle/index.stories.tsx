@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { Toggle } from "./";
 
 const meta = {
-    title: "components/lesson3/counter", // Storybookのサイドパネルツリーを設定
+    title: "components/lesson3/toggle", // Storybookのサイドパネルツリーを設定
     component: Toggle, // コンポーネントを登録
     tags: ["autodocs"],
 } satisfies Meta<typeof Toggle>;
