@@ -1,0 +1,22 @@
+@import "@/styles/mixins";
+
+.table {
+    margin: 50px 0;
+    color: #333;
+}
+.tbody {
+    display: block;
+}
+.tr {
+    border-bottom: 1px solid #dcdbdb;
+}
+.th {
+    display: block;
+    margin: 0 124px 0 0;
+    text-align: left;
+    font-weight: normal;
+}
+.image {
+    display: block;
+    margin: 0 0 120px 0;
+}
