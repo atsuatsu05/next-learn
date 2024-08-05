@@ -13,5 +13,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     //
     // propsに設定する値
-    args: { children: "コンテンツ" },
+    args: {
+        children: "Furniture Design",
+    },
+};
+
+export const Opened: Story = {
+    args: {
+        children: "Furniture Design",
+        opened: true,
+    },
 };

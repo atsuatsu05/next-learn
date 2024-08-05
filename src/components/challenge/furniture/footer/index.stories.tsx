@@ -13,5 +13,5 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
     //
     // propsに設定する値
-    args: { children: "コンテンツ" },
+    args: { copyright: "© Furniture Design" },
 };

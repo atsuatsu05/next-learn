@@ -3,10 +3,10 @@ import styles from "./index.module.scss";
 import Link from "next/link";
 
 type FooterProps = {
-    children: React.ReactNode;
+    copyright: string;
 };
 
-export const Footer: React.FC<FooterProps> = () => {
+export const Footer: React.FC<FooterProps> = ({ copyright }) => {
     return (
         <div className={styles.footer}>
             <nav className={styles.nav}>
@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = () => {
                     </li>
                 </ul>
             </nav>
-            <p className={styles.copyRight}>© Furniture Design</p>
+            <p className={styles.copyRight}>{copyright}</p>
         </div>
     );
 };
