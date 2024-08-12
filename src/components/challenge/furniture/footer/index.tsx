@@ -13,7 +13,7 @@ export const Footer: React.FC<FooterProps> = ({ copyright }) => {
                 <ul className={styles.ul}>
                     <li className={styles.li}>
                         <Link
-                            href="/challenge/furniture/products"
+                            href="/challenge/furniture/products/1"
                             className={styles.link}
                         >
                             PRODUCTS

@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./index.module.scss";
 
 type ItemTextProps = {
-    children: React.ReactNode;
-    size: string;
-    color: string;
-    material: string;
+    children?: React.ReactNode;
+    size?: string;
+    color?: string;
+    material?: string;
 };
 
 export const ItemText: React.FC<ItemTextProps> = ({

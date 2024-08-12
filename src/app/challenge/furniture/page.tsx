@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./style.module.scss";
-import { Title } from "@/components/challenge";
+import { Title, Item } from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "Top",
@@ -27,48 +27,23 @@ export default function Page() {
                 <br />
                 テキストテキストテキストテキストテキストテキストテキスト
             </p>
-            <h2 className={styles["h2-title"]}>Products</h2>
+            <Title>Products</Title>
             <div className={styles.products}>
-                <div className={styles["products-div"]}>
-                    <Link href="/challenge/furniture/products/detail">
-                        <Image
-                            src="/challenge/furniture/products.png"
-                            width={300}
-                            height={300}
-                            alt=""
-                        />
-                    </Link>
-                    <p className={styles["pd-title"]}>プロダクトタイトル</p>
-                    <p className={styles["pd-title"]}>¥99,999 +tax</p>
-                </div>
-                <div className={styles["products-div"]}>
-                    <Link href="/challenge/furniture/products/detail">
-                        <Image
-                            src="/challenge/furniture/products.png"
-                            width={300}
-                            height={300}
-                            alt=""
-                        />
-                    </Link>
-                    <p className={styles["pd-title"]}>プロダクトタイトル</p>
-                    <p className={styles["pd-title"]}>¥99,999 +tax</p>
-                </div>
-                <div className={styles["products-div"]}>
-                    <Link href="/challenge/furniture/products/detail">
-                        <Image
-                            src="/challenge/furniture/products.png"
-                            width={300}
-                            height={300}
-                            alt=""
-                        />
-                    </Link>
-                    <p className={styles["pd-title"]}>プロダクトタイトル</p>
-                    <p className={styles["pd-title"]}>¥99,999 +tax</p>
-                </div>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
             </div>
-
             <Link
-                href="/challenge/furniture/products"
+                href="/challenge/furniture/products/1"
                 className={styles.viewMore}
             >
                 View More

@@ -1,0 +1,10 @@
+@import "@/styles/mixins";
+.topContainer {
+    padding: 15px;
+    display: flex;
+    // justify-content: center;
+}
+.itemWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}

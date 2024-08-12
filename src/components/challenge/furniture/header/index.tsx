@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Link from "next/link";
 import styles from "./index.module.scss";
 import clsx from "clsx";
 
@@ -26,10 +27,36 @@ export const Header: React.FC<HeaderProps> = ({ children, opened = false }) => {
             </div>
 
             <ul className={clsx(styles.navList, open && styles.open)}>
-                <li className={styles.li}>PRODUCTS</li>
-                <li className={styles.li}>ABOUT</li>
-                <li className={styles.li}>COMPANY</li>
-                <li className={styles.li}>CONTACT</li>
+                <li className={styles.li}>
+                    <Link
+                        href="/challenge/furniture/products/1
+"
+                        className={styles.link}
+                    >
+                        PRODUCTS
+                    </Link>
+                </li>
+                <li className={styles.li}>
+                    <Link
+                        href="/challenge/furniture/about"
+                        className={styles.link}
+                    >
+                        ABOUT
+                    </Link>
+                </li>
+                <li className={styles.li}>
+                    <Link
+                        href="/challenge/furniture/company"
+                        className={styles.link}
+                    >
+                        COMPANY
+                    </Link>
+                </li>
+                <li className={styles.li}>
+                    <Link href="#" className={styles.link}>
+                        CONTACT
+                    </Link>
+                </li>
             </ul>
         </div>
     );

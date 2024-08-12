@@ -1,5 +1,5 @@
 .header {
-    // display: flex;
+    display: flex;
 }
 .logo {
     text-align: left;
@@ -10,7 +10,7 @@
     height: 30px;
     cursor: pointer;
     position: absolute;
-    top: 55px;
+    top: 35px;
     right: 20px;
 }
 
@@ -37,7 +37,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 70px;
+    top: 60px;
     background: #000;
     opacity: 0.8;
     padding: 36px 0 0 50px;
@@ -55,4 +55,8 @@
     .hmBottom {
         transform: rotate(-45deg);
     }
+}
+.link {
+    color: #fff;
+    text-decoration: none;
 }

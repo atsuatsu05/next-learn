@@ -12,7 +12,7 @@ export const Item: React.FC<ItemProps> = ({ itemTitle, price }) => {
     return (
         <div className={styles.products}>
             <div className={styles.item}>
-                <Link href="/challenge/furniture/products/detail">
+                <Link href="/challenge/furniture/products/detail/1">
                     <Image
                         src="/challenge/furniture/products.png"
                         width={300}
