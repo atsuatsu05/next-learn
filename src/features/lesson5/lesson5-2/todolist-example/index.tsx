@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 
 export const TodoListExample: React.FC = () => {
-    const [contentVal, setContentVal] = useState("");
-    const [id, setId] = useState(0);
     const [todoList, setTodoList] = useState<{ id: number; content: string }[]>(
         [],
     );
+    const [id, setId] = useState(0);
+    const [contentVal, setContentVal] = useState("");
 
     const addTodo = () => {
+        if (contentVal === "") return;
+
         const newTodo = {
             id: id,
             content: contentVal,
@@ -25,6 +27,7 @@ export const TodoListExample: React.FC = () => {
         <>
             <input
                 type="text"
+                value={contentVal}
                 onChange={(e) => setContentVal(e.target.value)}
             />
             <button onClick={addTodo}>追加</button>
