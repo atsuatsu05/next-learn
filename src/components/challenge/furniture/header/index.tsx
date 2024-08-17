@@ -53,7 +53,10 @@ export const Header: React.FC<HeaderProps> = ({ children, opened = false }) => {
                     </Link>
                 </li>
                 <li className={styles.li}>
-                    <Link href="#" className={styles.link}>
+                    <Link
+                        href="/challenge/furniture/contact"
+                        className={styles.link}
+                    >
                         CONTACT
                     </Link>
                 </li>

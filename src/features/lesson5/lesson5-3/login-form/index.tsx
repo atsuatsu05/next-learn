@@ -7,6 +7,7 @@ import {
     type LoginFormInputs,
 } from "@/libs/lesson5/validation-schema";
 import { loginFormAction } from "@/actions/lesson5/login-form";
+import { TextField } from "@/components/lesson5/text-field";
 
 export const LoginForm: React.FC = () => {
     const {
@@ -47,7 +48,8 @@ export const LoginForm: React.FC = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <label>ID</label>
                 <br />
-                <input type="text" {...register("id")} />
+                <TextField type="text" {...register("id")} />
+                {/* <input type="text" {...register("id")} /> */}
                 {errors.id && <div>{errors.id.message}</div>}
                 <br />
                 <label>パスワード</label>
