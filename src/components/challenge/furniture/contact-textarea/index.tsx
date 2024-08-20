@@ -11,7 +11,7 @@ export const ContactTextArea = forwardRef<
 >(({ label }, ref) => {
     return (
         <>
-            <label>{label}</label>
+            <label className={styles.label}>{label}</label>
             <textarea className={styles.textarea} ref={ref} />
         </>
     );

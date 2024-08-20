@@ -1,7 +1,7 @@
 @import "@/styles/mixins";
 .container {
-    max-width: 1000px;
-    padding: 0 0 0 40px;
+    max-width: 80%;
+    margin: 0 auto;
     // text-align: center;
     position: relative;
 }
@@ -20,10 +20,8 @@
 }
 
 .main {
-    @include sp {
-        width: 375px;
-        height: 600px;
-    }
+    display: block;
+    width: 100%;
 }
 
 .text {
@@ -33,7 +31,7 @@
 .products {
     @include sp {
         display: block;
-        max-width: 767px;
+        width: 70%;
         margin: 0 auto;
     }
     display: flex;

@@ -10,7 +10,7 @@ export const ContactInput = forwardRef<HTMLInputElement, ContactInputProps>(
     ({ type, label }, ref) => {
         return (
             <>
-                <label>{label}</label>
+                <label className={styles.label}>{label}</label>
                 <input className={styles.input} type={type} ref={ref} />
             </>
         );

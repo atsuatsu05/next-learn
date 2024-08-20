@@ -16,7 +16,7 @@ export default function Page() {
                 src="/challenge/furniture/main.png"
                 width={1000}
                 height={600}
-                alt=""
+                alt="メインビジュアル"
                 className={styles.main}
             />
             <Title>About</Title>

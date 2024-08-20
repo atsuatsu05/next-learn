@@ -1,17 +1,4 @@
-.form {
+@import "@/styles/mixins";
+.wrapper {
     width: 100%;
-    margin: 30px 0 360px 0;
-}
-.submitArea {
-    width: 60%;
-}
-.submit {
-    display: block;
-    margin: 40px auto 0 auto;
-    color: #fff;
-    background: #000;
-    border: none;
-    width: 144px;
-    height: 32px;
-    cursor: pointer;
 }
