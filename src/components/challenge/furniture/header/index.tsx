@@ -16,7 +16,11 @@ export const Header: React.FC<HeaderProps> = ({ children, opened = false }) => {
     return (
         <div className={styles.header}>
             <div>
-                <h1 className={styles.logo}>{children}</h1>
+                <h1 className={styles.logo}>
+                    <Link className={styles.logo} href="/challenge/furniture">
+                        {children}
+                    </Link>
+                </h1>
                 <div
                     className={clsx(styles.btn, open && styles.open)}
                     onClick={handleClick}

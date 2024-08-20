@@ -1,14 +1,26 @@
+@import "@/styles/mixins";
+
 .footer {
     display: flex;
     justify-content: space-between;
+    @include sp {
+        flex-wrap: wrap;
+    }
 }
 
 .nav {
     margin: 0 0 20px 0;
+    @include sp {
+        margin: 0;
+    }
 }
 
 .ul {
     display: flex;
+    padding: 0px;
+    @include sp {
+        margin: 0 0 5px 0;
+    }
 }
 
 .li {
@@ -19,6 +31,9 @@
 .copyRight {
     font-size: 1em;
     color: #333;
+    @include sp {
+        margin: 0;
+    }
 }
 
 .link {
