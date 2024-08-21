@@ -12,6 +12,7 @@ import {
     Counter,
     Toggle,
 } from "@/components/lesson3"; //tsconfigで定めてる
+import { getProfile } from "@/fetch/lesson3/get-profile";
 
 export const metadata: Metadata = {
     title: "Lesson3 コンポーネントの作成と管理",
