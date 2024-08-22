@@ -19,16 +19,15 @@ export const metadata: Metadata = {
     description: "Lesson3 コンポーネントの作成と管理",
 };
 
-export default function Page() {
-    const fullName: string = "本橋温美";
-    const homeTown: string = "宮城県";
-    const age: number | null = null;
-    const hobbiesSkills: { hobbies: string; skills: string } = {
-        hobbies: "喫茶店巡り・音楽鑑賞",
-        skills: "片倒立",
-    };
-    const favoriteFoods: string[] = ["ドーナツ", "お団子", "焼肉"];
-    const favoriteManga: string[] = ["スラムダンク", "MAJOR", "コナン"];
+export default async function Page() {
+    const {
+        fullName,
+        homeTown,
+        age,
+        hobbiesSkills,
+        favoriteFoods,
+        favoriteManga,
+    } = await getProfile();
     return (
         <Contents>
             <PageTitle>自己紹介</PageTitle>
