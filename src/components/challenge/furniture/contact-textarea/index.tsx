@@ -8,11 +8,11 @@ type ContactTextAreaProps = {
 export const ContactTextArea = forwardRef<
     HTMLTextAreaElement,
     ContactTextAreaProps
->(({ label }, ref) => {
+>(({ label, ...props }, ref) => {
     return (
         <>
             <label className={styles.label}>{label}</label>
-            <textarea className={styles.textarea} ref={ref} />
+            <textarea className={styles.textarea} ref={ref} {...props} />
         </>
     );
 });

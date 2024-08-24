@@ -1,0 +1,8 @@
+@import "@/styles/mixins";
+
+.right {
+    margin: 0 0 30px 64px;
+    @include sp {
+        margin: 0;
+    }
+}

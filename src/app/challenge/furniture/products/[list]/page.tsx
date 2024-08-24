@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import styles from "./style.module.scss";
-import { Item, PageNation } from "@/components/challenge";
+import { Item, PageNation, PageTitle, Wrapper } from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "",
@@ -15,61 +13,59 @@ type PageProps = {
 };
 export default function Page({ params }: PageProps) {
     return (
-        <div className={styles.productsContainer}>
-            <div>
-                <p className={styles.p}>Products</p>
-                <div className={styles.itemWrapper}>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                    <Item
-                        itemTitle="プロダクトタイトル"
-                        price="¥99,999 +tax"
-                    ></Item>
-                </div>
-                <PageNation />
-            </div>
-        </div>
+        <>
+            <PageTitle>Products</PageTitle>
+            <Wrapper style="products">
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+                <Item
+                    itemTitle="プロダクトタイトル"
+                    price="¥99,999 +tax"
+                ></Item>
+            </Wrapper>
+            <PageNation />
+        </>
     );
 }

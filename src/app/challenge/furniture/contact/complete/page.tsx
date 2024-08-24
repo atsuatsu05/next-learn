@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import styles from "./styles.module.scss";
+import { PageTitle, Wrapper, Text, LinkText } from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "Contact-Complete",
@@ -10,9 +9,11 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <p className={styles.title}>Contact</p>
-            <p>お問い合わせありがとうございました。</p>
-            <Link href="/challenge/furniture">Back to Home</Link>
+            <PageTitle>Contact</PageTitle>
+            <Wrapper style="contact">
+                <Text>お問い合わせありがとうございました。</Text>
+            </Wrapper>
+            <LinkText href="/challenge/furniture">Back to Home</LinkText>
         </>
     );
 }

@@ -1,14 +1,4 @@
 @import "@/styles/mixins";
-.container {
-    max-width: 80%;
-    margin: 0 auto;
-    // text-align: center;
-    position: relative;
-}
-
-.topContainer {
-    text-align: center;
-}
 
 .h2-title {
     flex-wrap: nowrap;
@@ -19,30 +9,8 @@
     color: #383e45;
 }
 
-.main {
-    display: block;
-    width: 100%;
-}
-
 .text {
     color: #383e45;
-}
-
-.products {
-    @include sp {
-        display: block;
-        width: 70%;
-        margin: 0 auto;
-    }
-    display: flex;
-    justify-content: center;
-}
-
-.viewMore {
-    display: block;
-    margin: 60px 0 90px 0;
-    text-decoration: none;
-    color: #333;
 }
 
 .footer {

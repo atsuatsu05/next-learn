@@ -25,7 +25,7 @@ export const PokeDex: React.FC<PokeDexProps> = async ({ pokeId }) => {
                         src={pokeData.data.imageUrl}
                         width={200}
                         height={200}
-                        alt=""
+                        alt={pokeData.data.name}
                     />
                     {!Number.isNaN(pokeId) && (
                         <div>

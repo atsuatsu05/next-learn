@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import "@/styles/index.scss";
-import styles from "./style.module.scss";
-import { Header, Footer } from "@/components/challenge";
+import { Header, Footer, Container } from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "TOP|Furniture Design",
@@ -13,10 +12,10 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <div className={styles.container}>
+        <Container>
             <Header>Furniture Design</Header>
-            <div>{children}</div>
+            {children}
             <Footer copyright="© Furniture Design"></Footer>
-        </div>
+        </Container>
     );
 }

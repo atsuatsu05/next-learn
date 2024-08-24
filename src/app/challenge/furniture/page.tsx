@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "./style.module.scss";
-import { Title, Item } from "@/components/challenge";
+import {
+    Title,
+    Item,
+    Text,
+    Wrapper,
+    MainImage,
+    LinkText,
+} from "@/components/challenge";
 
 export const metadata: Metadata = {
     title: "Top",
@@ -11,24 +15,19 @@ export const metadata: Metadata = {
 
 export default function Page() {
     return (
-        <div className={styles.topContainer}>
-            <Image
-                src="/challenge/furniture/main.png"
-                width={1000}
-                height={600}
-                alt="メインビジュアル"
-                className={styles.main}
-            />
+        <Wrapper style="top">
+            <MainImage src="/challenge/furniture/main.png" />
             <Title>About</Title>
-            <p className={styles.text}>
+            <Text>
                 テキストテキストテキストテキストテキストテキストテキスト
                 <br />
                 テキストテキストテキストテキストテキストテキストテキスト
                 <br />
                 テキストテキストテキストテキストテキストテキストテキスト
-            </p>
+            </Text>
+
             <Title>Products</Title>
-            <div className={styles.products}>
+            <Wrapper style="topProducts">
                 <Item
                     itemTitle="プロダクトタイトル"
                     price="¥99,999 +tax"
@@ -41,13 +40,11 @@ export default function Page() {
                     itemTitle="プロダクトタイトル"
                     price="¥99,999 +tax"
                 ></Item>
-            </div>
-            <Link
-                href="/challenge/furniture/products/1"
-                className={styles.viewMore}
-            >
+            </Wrapper>
+
+            <LinkText href="/challenge/furniture/products/1">
                 View More
-            </Link>
-        </div>
+            </LinkText>
+        </Wrapper>
     );
 }
