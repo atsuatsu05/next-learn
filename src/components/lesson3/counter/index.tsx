@@ -13,7 +13,7 @@ export const Counter: React.FC = () => {
     return (
         <>
             <button onClick={handleClickCountUp}>+</button>
-            {count}
+            <span>{count}</span>
             <button onClick={handleClickCountDown}>-</button>
         </>
     );
