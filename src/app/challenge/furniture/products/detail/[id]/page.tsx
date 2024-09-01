@@ -7,31 +7,55 @@ import {
     TextRight,
 } from "@/components/challenge";
 import { UseRouter } from "@/features/challenge/furniture/products/detail/use-router";
+import { getProductsDetail } from "@/fetch/challenge/furniture/get-products-detail";
 
 export const metadata: Metadata = {
     title: "Detail",
     description: "Furniture DesignのDetailページ",
 };
 
-export default function Page() {
+type PageProps = {
+    params: {
+        id: string;
+    };
+};
+type Item = {
+    id: string;
+    title: string;
+    description: string;
+    article: string;
+    imageUrl: string;
+    price: string;
+    size: {
+        w: number;
+        d: string;
+        h: string;
+    };
+    color: string;
+    material: string;
+};
+
+export default async function Page({ params }: PageProps) {
+    const item: Item = await getProductsDetail(params.id);
+    console.log(item);
     return (
         <>
-            <PageTitle>ブログタイトル</PageTitle>
+            <PageTitle>{item.title}</PageTitle>
             <Wrapper style="detail">
                 <Image
-                    src="/challenge/furniture/detail.png"
+                    src={item.imageUrl}
                     width={400}
                     height={400}
                     alt="detail"
                 />
                 <TextRight>
                     <ItemText
-                        size="W999 × D999 × H999"
-                        color="テキスト"
-                        material="テキストテキストテキスト"
-                    >
-                        テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                    </ItemText>
+                        article={item.article}
+                        size={`W${item.size.w} × D${item.size.d} × H${item.size.h}`}
+                        price={`¥${item.price.toLocaleString()} +tax`}
+                        color={item.color}
+                        material={item.material}
+                    ></ItemText>
                     <Wrapper style="back">
                         <UseRouter></UseRouter>
                     </Wrapper>

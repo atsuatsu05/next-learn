@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import {
     Title,
-    Item,
     Text,
     Wrapper,
     MainImage,
     LinkText,
 } from "@/components/challenge";
+import { ProductsFetch } from "@/features/challenge/furniture/top/products-fetch";
 
 export const metadata: Metadata = {
     title: "Top",
@@ -28,18 +28,7 @@ export default function Page() {
 
             <Title>Products</Title>
             <Wrapper style="topProducts">
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
+                <ProductsFetch />
             </Wrapper>
 
             <LinkText href="/challenge/furniture/products/1">

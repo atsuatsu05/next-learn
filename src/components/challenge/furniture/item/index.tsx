@@ -6,19 +6,22 @@ import Image from "next/image";
 type ItemProps = {
     itemTitle: string;
     price: string;
+    link?: string;
+    image?: string;
+    href: string;
 };
 
-export const Item: React.FC<ItemProps> = ({ itemTitle, price }) => {
+export const Item: React.FC<ItemProps> = ({
+    itemTitle,
+    price,
+    image,
+    href,
+}) => {
     return (
         <div className={styles.products}>
             <div className={styles.item}>
-                <Link href="/challenge/furniture/products/detail/1">
-                    <Image
-                        src="/challenge/furniture/products.png"
-                        width={300}
-                        height={300}
-                        alt=""
-                    />
+                <Link href={href}>
+                    <Image src={`${image}`} width={300} height={300} alt="" />
                 </Link>
                 <p className={styles["pd-title"]}>{itemTitle}</p>
                 <p className={styles["pd-title"]}>{price}</p>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import styles from "./styles.module.scss";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
     contactFormSchema,
@@ -22,6 +23,7 @@ export const ContactForm: React.FC = () => {
         resolver: zodResolver(contactFormSchema),
     });
     const [serverError, setServerError] = useState(false);
+    const router = useRouter();
 
     //送信ボタンが押された時の処理
     const onSubmit = async (data: ContactFormInput) => {
@@ -40,7 +42,9 @@ export const ContactForm: React.FC = () => {
             return;
         }
         //どのエラーにも引っ掛からなかったら正常の処理をする
-        ("/challenge/furniture/contact/complete");
+        setServerError(false);
+        console.log(data);
+        router.push("/challenge/furniture/contact/complete");
     };
 
     return (

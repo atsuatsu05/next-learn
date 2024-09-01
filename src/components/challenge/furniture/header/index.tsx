@@ -33,8 +33,7 @@ export const Header: React.FC<HeaderProps> = ({ children, opened = false }) => {
             <ul className={clsx(styles.navList, open && styles.open)}>
                 <li className={styles.li}>
                     <Link
-                        href="/challenge/furniture/products/1
-"
+                        href="/challenge/furniture/products/1"
                         className={styles.link}
                     >
                         PRODUCTS

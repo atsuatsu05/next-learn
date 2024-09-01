@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Item, PageNation, PageTitle, Wrapper } from "@/components/challenge";
+import { PageNation, PageTitle, Wrapper } from "@/components/challenge";
+import { ProductsListFetch } from "@/features/challenge/furniture/products/products-list-fetch";
 
 export const metadata: Metadata = {
     title: "",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 
 type PageProps = {
     params: {
-        list: string;
+        list: number;
     };
 };
 export default function Page({ params }: PageProps) {
@@ -16,54 +17,7 @@ export default function Page({ params }: PageProps) {
         <>
             <PageTitle>Products</PageTitle>
             <Wrapper style="products">
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
-                <Item
-                    itemTitle="プロダクトタイトル"
-                    price="¥99,999 +tax"
-                ></Item>
+                <ProductsListFetch list={params.list} />
             </Wrapper>
             <PageNation />
         </>

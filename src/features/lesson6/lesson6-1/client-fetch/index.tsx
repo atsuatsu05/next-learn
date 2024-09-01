@@ -4,10 +4,13 @@ import { getContents } from "@/fetch/lesson6/get-contents";
 
 export const ClientFetch: React.FC = () => {
     //クライアント側にはasync使えない
-    const [contents, setContents] = useState<{
-        title: string;
-        description: string | undefined;
-    }>(undefined);
+    const [contents, setContents] = useState<
+        | {
+              title: string;
+              description: string;
+          }
+        | undefined
+    >(undefined);
     useEffect(() => {
         const fetchGetContents = async () => {
             const contents = await getContents();

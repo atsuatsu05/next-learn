@@ -5,8 +5,8 @@ type TextFieldProps = {
 };
 
 export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
-    ({ type }, ref) => {
-        return <input type={type} ref={ref} />;
+    ({ type, ...props }, ref) => {
+        return <input type={type} ref={ref} {...props} />;
     },
 );
 
