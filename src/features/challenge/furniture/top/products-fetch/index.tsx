@@ -18,7 +18,7 @@ export const ProductsFetch: React.FC = async () => {
                 <Item
                     key={item.id}
                     itemTitle={item.title}
-                    price={"¥" + `${item.price.toLocaleString()}` + " +tax"}
+                    price={`¥${item.price.toLocaleString()} +tax`}
                     image={item.imageUrl}
                     href={`/challenge/furniture/products/detail/${item.id}`}
                 />

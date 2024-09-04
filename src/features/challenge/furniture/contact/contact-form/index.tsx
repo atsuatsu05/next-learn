@@ -48,7 +48,6 @@ export const ContactForm: React.FC = () => {
     };
 
     return (
-        // フォームの値が送信できていない・・？
         <>
             {serverError && (
                 <ServerErrorText>
@@ -61,6 +60,7 @@ export const ContactForm: React.FC = () => {
                     type="text"
                     {...register("name")}
                 />
+
                 {/* <input type="text" {...register("name")} /> */}
                 {errors.name && (
                     <div className={styles.error}>{errors.name.message}</div>
