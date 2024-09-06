@@ -1,6 +1,12 @@
 import { NextResponse, type NextRequest } from "next/server";
+const basicAuthInvalid = true; //追記：basic認証無効化
 
 export function middleware(req: NextRequest) {
+    if (basicAuthInvalid) {
+        //追記：basic認証無効化
+
+        return NextResponse.next(); //追記：basic認証無効化
+    }
     const basicAuth = req.headers.get("authorization");
 
     if (!basicAuth) {
