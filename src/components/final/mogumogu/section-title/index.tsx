@@ -7,7 +7,7 @@ type SectionTitleProps = {
 
 export const SectionTitle: React.FC<SectionTitleProps> = ({ children }) => {
     return (
-        <div className={styles.border}>
+        <div className={styles.center}>
             <h2 className={styles.h2}>{children}</h2>
         </div>
     );

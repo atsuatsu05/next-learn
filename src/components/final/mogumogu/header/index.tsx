@@ -28,12 +28,12 @@ export const Header: React.FC<HeaderProps> = () => {
                     <HeaderIcon
                         src={"/final/mogumogu/cart_icon.png"}
                         alt="カート"
-                        href={"/final/mogumogu"}
+                        href={"/final/mogumogu/cart"}
                     />
                     <HeaderIcon
-                        src={"/final/mogumogu/Heart_icon.png"}
-                        alt="お気に入りリスト"
-                        href={"/final/mogumogu"}
+                        src={"/final/mogumogu/mypage_icon.png"}
+                        alt="マイページ"
+                        href={"/final/mogumogu/my-page"}
                     />
                 </div>
                 <ul>

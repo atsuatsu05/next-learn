@@ -1,9 +1,12 @@
 @import "@/styles/mixins";
+.menu {
+    display: flex;
+}
+.mypage {
+    margin-bottom: 40px;
+}
 .container {
     width: 80%;
     margin: 0 auto;
     text-align: center;
-}
-.menu {
-    display: flex;
 }

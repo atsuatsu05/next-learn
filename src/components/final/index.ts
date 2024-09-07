@@ -13,3 +13,5 @@ export { DefinitionList, DefinitionItem } from "./mogumogu/definition-list";
 export { HeaderIcon } from "./mogumogu/header-icon";
 export { MenuItem } from "./mogumogu/menu-item";
 export { PageButton } from "./mogumogu/page-button";
+export { ContactInput } from "./mogumogu/contact-input";
+export { ContactTextArea } from "./mogumogu/contact-textarea";

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { Wrapper, PageTitle, Item, Container } from "@/components/final";
 
 export const metadata: Metadata = {
-    title: "cafe mogumogu",
-    description: "cafe mogumoguのTOPページ",
+    title: "menu-donuts",
+    description: "cafe mogumoguのドーナツ",
 };
 
 export default function Page() {
