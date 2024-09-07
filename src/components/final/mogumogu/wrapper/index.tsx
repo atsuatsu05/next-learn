@@ -1,0 +1,11 @@
+import React from "react";
+import styles from "./index.module.scss";
+
+type WrapperProps = {
+    children?: React.ReactNode;
+    style?: "top" | "menu" | "about" | "shop" | "contact";
+};
+
+export const Wrapper: React.FC<WrapperProps> = ({ children, style }) => {
+    return <div className={styles[style!]}>{children}</div>;
+};

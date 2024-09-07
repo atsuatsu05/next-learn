@@ -1,0 +1,29 @@
+@import "@/styles/mixins";
+.top {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about {
+    width: 80%;
+    margin: 0 auto;
+}
+.menu {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.detail {
+    display: flex;
+    margin: 0 0 120px 0;
+    justify-content: center;
+    @include sp {
+        flex-wrap: wrap;
+    }
+}
+
+.contact {
+    width: 80%;
+    margin: 0 auto;
+}

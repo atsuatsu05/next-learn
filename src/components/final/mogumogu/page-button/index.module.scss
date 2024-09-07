@@ -1,0 +1,15 @@
+@import "@/styles/mixins";
+
+.button {
+    color: #545454;
+    border: 1px solid #eeeeee;
+    border-radius: 30px;
+    background-color: #eeeeee;
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+    @include sp {
+        width: 80%;
+    }
+}
