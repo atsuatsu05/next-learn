@@ -1,0 +1,51 @@
+@import "@/styles/mixins";
+.form {
+    width: 100%;
+    margin: 30px 0;
+    @include sp {
+        width: 100%;
+    }
+}
+.submitArea {
+    width: 60%;
+    @include sp {
+        width: 100%;
+    }
+}
+.submit {
+    display: block;
+    margin: 40px auto 0 auto;
+    color: #fff;
+    background: #000;
+    border: none;
+    width: 144px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.textField {
+    display: block;
+    width: 60%;
+    margin: 10px 0;
+    padding: 3px;
+    @include sp {
+        width: 100%;
+    }
+}
+
+//エラーだった場合
+.error {
+    color: #ff5050;
+}
+.errorTextField {
+    display: block;
+    width: 60%;
+    margin: 10px 0;
+    padding: 3px;
+    border: solid 1px #ff5050;
+    background-color: #ffdddd;
+
+    @include sp {
+        width: 100%;
+    }
+}
