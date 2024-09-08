@@ -1,4 +1,11 @@
 @import "@/styles/mixins";
+.item {
+    display: flex;
+    text-align: center;
+    @include sp {
+        display: block;
+    }
+}
 .detail {
     display: block;
 }

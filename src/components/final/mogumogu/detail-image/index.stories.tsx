@@ -14,6 +14,7 @@ export const Default: Story = {
     //
     // propsに設定する値
     args: {
+        children: "テキスト",
         src: "画像パス",
         alt: "テキスト",
     },

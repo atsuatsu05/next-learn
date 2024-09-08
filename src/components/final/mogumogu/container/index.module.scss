@@ -1,7 +1,11 @@
 @import "@/styles/mixins";
-.menuItem {
+.item {
     margin: 0 10px;
+    @include sp {
+        margin: 50px 0 0 0;
+    }
 }
+
 .mypage {
     margin-bottom: 40px;
 }

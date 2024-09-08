@@ -1,7 +1,11 @@
+@import "@/styles/mixins";
 .menu {
     display: flex;
     margin-bottom: 35px;
     border-bottom: 1px solid #eee;
     padding-bottom: 30px;
     justify-content: center;
+    @include sp {
+        flex-wrap: wrap;
+    }
 }

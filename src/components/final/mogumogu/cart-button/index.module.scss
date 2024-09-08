@@ -1,0 +1,15 @@
+@import "@/styles/mixins";
+
+.button {
+    width: 50%;
+    color: #fff;
+    background-color: #545454;
+    border-radius: 5px;
+    padding: 3px 10px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+.text {
+    margin: 10px;
+}

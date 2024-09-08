@@ -1,0 +1,10 @@
+@import "@/styles/mixins";
+.cartTitle {
+    display: flex;
+    margin-bottom: 35px;
+    border-bottom: 1px solid #dddddd;
+    justify-content: space-around;
+    @include sp {
+        display: none;
+    }
+}

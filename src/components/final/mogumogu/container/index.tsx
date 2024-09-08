@@ -3,9 +3,9 @@ import styles from "./index.module.scss";
 
 type ContainerProps = {
     children?: React.ReactNode;
-    style?: "menuItem" | "mypage" | "container";
+    style: "item" | "mypage" | "container";
 };
 
 export const Container: React.FC<ContainerProps> = ({ children, style }) => {
-    return <div className={styles!["style"]}>{children}</div>;
+    return <div className={styles![style]}>{children}</div>;
 };

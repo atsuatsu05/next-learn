@@ -8,11 +8,13 @@ import {
     MenuItemBox,
     DetailImage,
     DetailText,
+    PageButton,
+    LinkText,
 } from "@/components/final";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
-    description: "cafe mogumoguのTOPページ",
+    description: "cafe mogumoguのMenuページ",
 };
 
 export default function Page() {
@@ -23,7 +25,7 @@ export default function Page() {
                 {/* <Container style="container"> */}
                 <MenuTitle>Donuts</MenuTitle>
                 <MenuItemBox>
-                    <Container style="menuItem">
+                    <Container style={"item"}>
                         <DetailImage
                             src="/final/mogumogu/menu/d_choco.png"
                             alt="チョコレートドーナツ"
@@ -33,7 +35,7 @@ export default function Page() {
                             price="¥400（税込）"
                         />
                     </Container>
-                    <Container style="menuItem">
+                    <Container style={"item"}>
                         <DetailImage
                             src="/final/mogumogu/menu/d_choco.png"
                             alt="チョコレートドーナツ"
@@ -63,6 +65,9 @@ export default function Page() {
                     />
                 </MenuItemBox>
                 {/* </Container> */}
+                <LinkText href="/final/mogumogu/cart">
+                    <PageButton>カートの中身を見る</PageButton>
+                </LinkText>
             </Wrapper>
         </>
     );
