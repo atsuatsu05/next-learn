@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 export default function Page() {
     return (
         <>
-            <Wrapper style={"shop"}>
+            <Wrapper style={"company"}>
                 <PageTitle>Company</PageTitle>
                 <Container>
                     <DefinitionList>
