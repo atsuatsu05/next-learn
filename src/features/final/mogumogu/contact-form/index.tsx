@@ -12,7 +12,6 @@ import {
 } from "@/libs/challenge/furniture/validation-schema";
 import { ContactInput } from "@/components/final/mogumogu/contact-input";
 import { ContactTextArea } from "@/components/final/mogumogu/contact-textarea";
-import { ContactSelect } from "@/components/final/mogumogu/contact-select";
 import { ContactFormAction } from "@/actions/challenge/furniture/contact-form";
 import { ServerErrorText } from "@/components/challenge/furniture/serverError-text";
 
@@ -58,7 +57,6 @@ export const ContactForm: React.FC = () => {
                 </ServerErrorText>
             )}
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-                <ContactSelect />
                 <ContactInput
                     label="お名前"
                     type="text"

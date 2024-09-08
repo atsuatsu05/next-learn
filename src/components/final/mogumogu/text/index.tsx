@@ -2,9 +2,9 @@ import React from "react";
 import styles from "./index.module.scss";
 
 type TextProps = {
-    children?: React.ReactNode;
+    align?: "right" | "center" | "left";
+    children: React.ReactNode;
 };
-
-export const Text: React.FC<TextProps> = ({ children }) => {
+export const Text: React.FC<TextProps> = ({ children, align }) => {
     return <p className={styles.text}>{children}</p>;
 };

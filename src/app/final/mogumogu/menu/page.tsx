@@ -6,6 +6,8 @@ import {
     MenuTitle,
     Item,
     MenuItemBox,
+    DetailImage,
+    DetailText,
 } from "@/components/final";
 
 export const metadata: Metadata = {
@@ -21,12 +23,26 @@ export default function Page() {
                 {/* <Container style="container"> */}
                 <MenuTitle>Donuts</MenuTitle>
                 <MenuItemBox>
-                    <Item
-                        itemTitle="チョコレートドーナツ"
-                        price="¥400（税込）"
-                        image={"/final/mogumogu/menu/d_choco.png"}
-                        href="/final/mogumogu/menu/donuts"
-                    />
+                    <Container style="menuItem">
+                        <DetailImage
+                            src="/final/mogumogu/menu/d_choco.png"
+                            alt="チョコレートドーナツ"
+                        />
+                        <DetailText
+                            name="チョコレートドーナツ"
+                            price="¥400（税込）"
+                        />
+                    </Container>
+                    <Container style="menuItem">
+                        <DetailImage
+                            src="/final/mogumogu/menu/d_choco.png"
+                            alt="チョコレートドーナツ"
+                        />
+                        <DetailText
+                            name="チョコレートドーナツ"
+                            price="¥400（税込）"
+                        />
+                    </Container>
                 </MenuItemBox>
                 <MenuTitle>Foods</MenuTitle>
                 <MenuItemBox>
@@ -34,7 +50,7 @@ export default function Page() {
                         itemTitle="クレープ"
                         price="¥400（税込）"
                         image={"/final/mogumogu/menu/food_crepe.png"}
-                        href="/final/mogumogu/menu/foods"
+                        href="/final/mogumogu/menu/detail/2"
                     />
                 </MenuItemBox>
                 <MenuTitle>Drink</MenuTitle>
@@ -43,7 +59,7 @@ export default function Page() {
                         itemTitle="ブレンドコーヒー"
                         price="¥400（税込）"
                         image={"/final/mogumogu/menu/dr_coffee.png"}
-                        href="/final/mogumogu/menu/drink"
+                        href="/final/mogumogu/menu/detail/3"
                     />
                 </MenuItemBox>
                 {/* </Container> */}

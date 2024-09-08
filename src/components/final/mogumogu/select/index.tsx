@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 import styles from "./index.module.scss";
 
-export const ContactSelect: React.FC = ({ ...props }) => {
+export const Select: React.FC = ({ ...props }) => {
     const [select, setSelect] = useState("");
-    const options = ["予約について", "仕事の依頼について", "その他"];
+    const options = ["袋あり", "袋なし"];
     const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         setSelect(e.target.value);
     };
