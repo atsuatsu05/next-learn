@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ContactInput } from ".";
+import { ContactTextArea } from ".";
 
 const meta = {
-    title: "components/challenge/furniture/contact-form", // Storybookのサイドパネルツリーを設定
-    component: ContactInput, // コンポーネントを登録
+    title: "components/final/mogumogu/contact-textarea", // Storybookのサイドパネルツリーを設定
+    component: ContactTextArea, // コンポーネントを登録
     tags: ["autodocs"],
-} satisfies Meta<typeof ContactInput>;
+} satisfies Meta<typeof ContactTextArea>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -14,7 +14,6 @@ export const Default: Story = {
     //
     // propsに設定する値
     args: {
-        label: "お名前",
-        type: "text",
+        label: "テキスト",
     },
 };

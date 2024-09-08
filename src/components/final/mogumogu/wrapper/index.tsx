@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 
 type WrapperProps = {
     children?: React.ReactNode;
-    style?: "top" | "menu" | "contact" | "cart" | "mypage";
+    style?: "top" | "menu" | "company" | "contact" | "cart" | "mypage";
 };
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, style }) => {

@@ -14,6 +14,6 @@ export const Default: Story = {
     //
     // propsに設定する値
     args: {
-        src: "/challenge/furniture/main.png",
+        src: "画像パス",
     },
 };
