@@ -3,7 +3,7 @@ import styles from "./index.module.scss";
 
 type ContainerProps = {
     children?: React.ReactNode;
-    style: "item" | "mypage" | "container";
+    style: "item" | "mypage" | "company" | "container";
 };
 
 export const Container: React.FC<ContainerProps> = ({ children, style }) => {

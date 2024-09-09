@@ -8,9 +8,9 @@ type CartButtonProps = {
 export const CartButton: React.FC<CartButtonProps> = ({ children }) => {
     return (
         <>
-            <div className={styles.button}>
+            <button className={styles.button}>
                 <p className={styles.text}>{children}</p>
-            </div>
+            </button>
         </>
     );
 };

@@ -18,7 +18,7 @@ export default function Page() {
         <>
             <Wrapper style={"company"}>
                 <PageTitle>Company</PageTitle>
-                <Container>
+                <Container style="company">
                     <DefinitionList>
                         <DefinitionItem dt="open">
                             金・土・日 10：00〜17：00

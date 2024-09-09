@@ -83,10 +83,10 @@ export const ContactForm: React.FC = () => {
                 {errors.inquiry && (
                     <div className={styles.error}>{errors.inquiry.message}</div>
                 )}
+                <div className={styles.submitArea}>
+                    <PageButton>送信</PageButton>
+                </div>
             </form>
-            <div className={styles.submitArea}>
-                <PageButton>送信</PageButton>
-            </div>
         </>
     );
 };

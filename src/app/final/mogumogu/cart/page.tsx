@@ -9,6 +9,7 @@ import {
     CartItemTitle,
     DetailImage,
 } from "@/components/final";
+import { CartItems } from "@/features/final/mogumogu/cart-items";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
@@ -20,15 +21,9 @@ export default function Page() {
         <>
             <Wrapper style={"cart"}>
                 <SectionTitle>Cart</SectionTitle>
-                <CartItemTitle />
-                <DetailImage
-                    src="/final/mogumogu/menu/d_choco.png"
-                    alt="チョコレートドーナツ"
-                >
-                    チョコレートドーナツ
-                </DetailImage>
+                <CartItems />
                 <LinkText href="/final/mogumogu">
-                    <PageButton>注文内容を送信する</PageButton>
+                    <PageButton>注文内容を確定する</PageButton>
                 </LinkText>
             </Wrapper>
         </>
