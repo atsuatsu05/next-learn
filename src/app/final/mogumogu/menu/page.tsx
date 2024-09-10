@@ -11,6 +11,7 @@ import {
     PageButton,
     LinkText,
 } from "@/components/final";
+import { Donuts } from "@/features/final/mogumogu/donuts-fetch";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
@@ -25,16 +26,7 @@ export default function Page() {
                 {/* <Container style="container"> */}
                 <MenuTitle>Donuts</MenuTitle>
                 <MenuItemBox>
-                    <Container style={"item"}>
-                        <DetailImage
-                            src="/final/mogumogu/menu/d_choco.png"
-                            alt="チョコレートドーナツ"
-                        />
-                        <DetailText
-                            name="チョコレートドーナツ"
-                            price="¥400（税込）"
-                        />
-                    </Container>
+                    <Donuts />
                     <Container style={"item"}>
                         <DetailImage
                             src="/final/mogumogu/menu/d_choco.png"

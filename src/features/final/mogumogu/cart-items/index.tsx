@@ -24,6 +24,7 @@ export const CartItems: React.FC = () => {
                             width={125}
                             height={100}
                             alt="チョコレートドーナツ"
+                            style={{ width: "100%", height: "auto" }}
                         />
                         チョコレートドーナツ
                     </th>

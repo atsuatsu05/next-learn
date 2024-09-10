@@ -18,7 +18,7 @@ export const ProductsListFetch: React.FC<ProductsListFetchProps> = async ({
     list,
 }) => {
     const contents = await getProductsList(list);
-    // console.log(list);
+    console.log(contents);
     return (
         <>
             {contents.items.map((item: Item) => (

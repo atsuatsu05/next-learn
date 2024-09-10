@@ -14,6 +14,7 @@ export const MainImage: React.FC<MainImageProps> = ({ src }) => {
             width={800}
             height={900}
             alt="メインビジュアル"
+            style={{ width: "100%", height: "auto" }}
         />
     );
 };
