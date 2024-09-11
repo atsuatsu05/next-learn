@@ -2,7 +2,7 @@ import React from "react";
 import { client } from "@/libs/final/mogumogu/client";
 import { Container, DetailImage, DetailText } from "@/components/final";
 
-type DonutsProps = {};
+type DrinkProps = {};
 
 type Item = {
     id: string;
@@ -13,9 +13,9 @@ type Item = {
     price: number;
 };
 
-export const Donuts: React.FC<DonutsProps> = async () => {
+export const Drink: React.FC<DrinkProps> = async () => {
     const data = await client.get({
-        endpoint: "donuts",
+        endpoint: "drink",
     });
     console.log(data.contents[0].image);
 

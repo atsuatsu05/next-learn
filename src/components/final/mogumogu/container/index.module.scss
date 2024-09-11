@@ -1,6 +1,7 @@
 @import "@/styles/mixins";
 .item {
     margin: 0 10px;
+    padding: 0 20px;
     @include sp {
         margin: 50px 0 0 0;
     }

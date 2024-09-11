@@ -7,9 +7,12 @@ import {
     SectionTitle,
     Item,
     LinkText,
-    Text,
+    AboutText,
     PageButton,
 } from "@/components/final";
+import { DonutsTop } from "@/features/final/mogumogu/donuts-top-fetch";
+import { FoodsTop } from "@/features/final/mogumogu/foods-top-fetch ";
+import { DrinkTop } from "@/features/final/mogumogu/drink-top-fetch ";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
@@ -22,34 +25,14 @@ export default function Page() {
             <Wrapper style={"top"}>
                 <MainImage src={"/final/mogumogu/main_visual.jpg"} />
                 <SectionTitle>cafe mogumogu</SectionTitle>
-                <Text>素朴なお菓子と美味しい空気があるお店 mogumogu</Text>
-                <Text>
-                    木々の緑と、自然の音に身をゆだねて、ぼーっとする時間をご提供します。
-                    <br />
-                    そんな時間のおともに、ドーナツやドリンクをどうぞ。
-                    <br />
-                    どんなときも、もぐもぐすれば、お腹もこころもホッと一息つけるはず。
-                </Text>
-                <Text>どうぞごゆるりとお過ごしください。</Text>
+                <AboutText />
 
                 <SectionTitle>menu</SectionTitle>
                 {/* apiからmapで取り出したい */}
                 <Section style={"menu"}>
-                    <Item
-                        href={"/final/mogumogu/menu/"}
-                        image={"/final/mogumogu/menu/d_choco.png"}
-                        itemTitle={"donuts"}
-                    />
-                    <Item
-                        href={"/final/mogumogu/"}
-                        image={"/final/mogumogu/menu/food_pancake.png"}
-                        itemTitle={"foods"}
-                    />
-                    <Item
-                        href={"/final/mogumogu/"}
-                        image={"/final/mogumogu/menu/dr_coffee.png"}
-                        itemTitle={"drink"}
-                    />
+                    <DonutsTop />
+                    <FoodsTop />
+                    <DrinkTop />
                 </Section>
 
                 <LinkText href={"/final/mogumogu/menu/"}>

@@ -12,6 +12,8 @@ import {
     LinkText,
 } from "@/components/final";
 import { Donuts } from "@/features/final/mogumogu/donuts-fetch";
+import { Foods } from "@/features/final/mogumogu/foods-fetch";
+import { Drink } from "@/features/final/mogumogu/drinks-fetch";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
@@ -23,38 +25,17 @@ export default function Page() {
         <>
             <Wrapper style={"menu"}>
                 <PageTitle>Menu</PageTitle>
-                {/* <Container style="container"> */}
                 <MenuTitle>Donuts</MenuTitle>
                 <MenuItemBox>
                     <Donuts />
-                    <Container style={"item"}>
-                        <DetailImage
-                            src="/final/mogumogu/menu/d_choco.png"
-                            alt="チョコレートドーナツ"
-                        />
-                        <DetailText
-                            name="チョコレートドーナツ"
-                            price="¥400（税込）"
-                        />
-                    </Container>
                 </MenuItemBox>
                 <MenuTitle>Foods</MenuTitle>
                 <MenuItemBox>
-                    <Item
-                        itemTitle="クレープ"
-                        price="¥400（税込）"
-                        image={"/final/mogumogu/menu/food_crepe.png"}
-                        href="/final/mogumogu/menu/detail/2"
-                    />
+                    <Foods />
                 </MenuItemBox>
                 <MenuTitle>Drink</MenuTitle>
                 <MenuItemBox>
-                    <Item
-                        itemTitle="ブレンドコーヒー"
-                        price="¥400（税込）"
-                        image={"/final/mogumogu/menu/dr_coffee.png"}
-                        href="/final/mogumogu/menu/detail/3"
-                    />
+                    <Drink />
                 </MenuItemBox>
                 {/* </Container> */}
                 <LinkText href="/final/mogumogu/cart">

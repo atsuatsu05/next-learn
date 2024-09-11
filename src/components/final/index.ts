@@ -24,3 +24,4 @@ export { DetailText } from "./mogumogu/detail-text";
 export { CartButton } from "./mogumogu/cart-button";
 export { CartItemTitle } from "./mogumogu/cart-item-title";
 export { Counter } from "./mogumogu/counter";
+export { AboutText } from "./mogumogu/about-text";
