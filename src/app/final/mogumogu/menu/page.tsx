@@ -2,12 +2,8 @@ import type { Metadata } from "next";
 import {
     Wrapper,
     PageTitle,
-    Container,
     MenuTitle,
-    Item,
     MenuItemBox,
-    DetailImage,
-    DetailText,
     PageButton,
     LinkText,
 } from "@/components/final";
@@ -37,10 +33,11 @@ export default function Page() {
                 <MenuItemBox>
                     <Drink />
                 </MenuItemBox>
-                {/* </Container> */}
-                <LinkText href="/final/mogumogu/cart">
-                    <PageButton>カートの中身を見る</PageButton>
-                </LinkText>
+                <PageButton>
+                    <LinkText href="/final/mogumogu/cart">
+                        カートの中身を見る
+                    </LinkText>
+                </PageButton>
             </Wrapper>
         </>
     );

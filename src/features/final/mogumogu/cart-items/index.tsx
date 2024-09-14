@@ -38,7 +38,7 @@ export const CartItems: React.FC = () => {
                     <th scope="row" colSpan={2} className={styles.total}>
                         合計
                     </th>
-                    <td>¥{total}</td>
+                    <td>¥999</td>
                 </tr>
             </tfoot>
         </table>

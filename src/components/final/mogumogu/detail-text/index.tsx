@@ -12,8 +12,6 @@ export const DetailText: React.FC<DetailTextProps> = ({ name, price }) => {
         <div>
             <h4>{name}</h4>
             <p className={styles.text}>{price}</p>
-            <Counter />
-            <CartButton>カートに追加</CartButton>
         </div>
     );
 };

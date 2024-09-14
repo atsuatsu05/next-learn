@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "@/styles/index.scss";
 import { Header, Footer } from "@/components/final";
+import { CartContextProvider } from "@/app/context/final/mogumogu/cart-context";
 
 export const metadata: Metadata = {
     title: "TOP|mogumogu",
@@ -12,10 +13,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }) {
     return (
-        <>
-            <Header />
-            <div>{children}</div>
-            <Footer copyright="© cafe mogumogu" />
-        </>
+        <html lang="ja">
+            <body>
+                <CartContextProvider>
+                    <Header />
+                    <div>{children}</div>
+                    <Footer copyright="© cafe mogumogu" />
+                </CartContextProvider>
+            </body>
+        </html>
     );
 }

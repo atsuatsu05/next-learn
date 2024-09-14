@@ -1,6 +1,12 @@
 import React from "react";
 import { client } from "@/libs/final/mogumogu/client";
-import { Container, DetailImage, DetailText } from "@/components/final";
+import {
+    Container,
+    DetailImage,
+    DetailText,
+    Counter,
+    CartButton,
+} from "@/components/final";
 
 type DrinkProps = {};
 
@@ -28,6 +34,8 @@ export const Drink: React.FC<DrinkProps> = async () => {
                         name={item.title}
                         price={`¥${item.price}（税込）`}
                     />
+                    <Counter />
+                    <CartButton>カートに追加</CartButton>
                 </Container>
             ))}
         </>

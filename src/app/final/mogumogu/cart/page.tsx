@@ -22,9 +22,11 @@ export default function Page() {
             <Wrapper style={"cart"}>
                 <SectionTitle>Cart</SectionTitle>
                 <CartItems />
-                <LinkText href="/final/mogumogu">
-                    <PageButton>注文内容を確定する</PageButton>
-                </LinkText>
+                <PageButton>
+                    <LinkText href="/final/mogumogu">
+                        注文内容を確定する
+                    </LinkText>
+                </PageButton>
             </Wrapper>
         </>
     );

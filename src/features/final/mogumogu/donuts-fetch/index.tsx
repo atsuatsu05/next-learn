@@ -1,6 +1,13 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import { client } from "@/libs/final/mogumogu/client";
-import { Container, DetailImage, DetailText } from "@/components/final";
+import {
+    Container,
+    DetailImage,
+    DetailText,
+    CartButton,
+    Counter,
+} from "@/components/final";
 
 type DonutsProps = {};
 
@@ -18,6 +25,14 @@ export const Donuts: React.FC<DonutsProps> = async () => {
         endpoint: "donuts",
     });
     console.log(data.contents[0].image);
+    //ローカルストレージへの保存
+    const [Value, setValue] = useState<string>("");
+    useEffect(() => {
+        const _Value = localStorage.getItem("Value");
+        if (_Value) {
+            setValue(_Value);
+        }
+    }, [Value]);
 
     return (
         <>
@@ -28,6 +43,8 @@ export const Donuts: React.FC<DonutsProps> = async () => {
                         name={item.title}
                         price={`¥${item.price}（税込）`}
                     />
+                    <Counter />
+                    <CartButton>カートに追加</CartButton>
                 </Container>
             ))}
         </>
