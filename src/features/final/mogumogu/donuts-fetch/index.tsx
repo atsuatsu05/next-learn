@@ -1,5 +1,4 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { client } from "@/libs/final/mogumogu/client";
 import {
     Container,
@@ -17,22 +16,19 @@ type Item = {
     image: {
         url: string;
     };
-    price: number;
+    price: string | number;
 };
 
 export const Donuts: React.FC<DonutsProps> = async () => {
     const data = await client.get({
         endpoint: "donuts",
     });
-    console.log(data.contents[0].image);
     //ローカルストレージへの保存
-    const [Value, setValue] = useState<string>("");
-    useEffect(() => {
-        const _Value = localStorage.getItem("Value");
-        if (_Value) {
-            setValue(_Value);
-        }
-    }, [Value]);
+    // const CartAdd = localStorage.getItem("product");
+    // const ProductCartAdd = localStorage.setItem(
+    //     "product",
+    //     JSON.stringify(data.item),
+    // );
 
     return (
         <>
@@ -44,7 +40,9 @@ export const Donuts: React.FC<DonutsProps> = async () => {
                         price={`¥${item.price}（税込）`}
                     />
                     <Counter />
-                    <CartButton>カートに追加</CartButton>
+                    <CartButton value={JSON.stringify(item)}>
+                        カートに追加
+                    </CartButton>
                 </Container>
             ))}
         </>

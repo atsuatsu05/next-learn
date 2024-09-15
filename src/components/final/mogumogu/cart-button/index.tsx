@@ -1,18 +1,28 @@
 "use client";
 import React, { useContext } from "react"; //nodeモジュールから読んできている
 import styles from "./index.module.scss";
-import { CartContext } from "@/app/context/final/mogumogu/cart-context";
 
 type CartButtonProps = {
     children: React.ReactNode;
+    value?: string | number;
 };
 
-export const CartButton: React.FC<CartButtonProps> = ({ children }) => {
-    const { addToCart, cartItems } = useContext(CartContext);
-    const cartItemCount = cartItems[id];
+export const CartButton: React.FC<CartButtonProps> = ({ children, value }) => {
+    // const { addToCart, cartItems } = useContext(CartContext);
+    // const cartItemCount = cartItems[id];
+    const cartAddProduct = localStorage.setItem(
+        "product",
+        JSON.stringify({ value }),
+    );
     return (
         <>
-            <button className={styles.button} onClick={() => addToCart(id)}>
+            <button
+                className={styles.button}
+                onClick={(e) => {
+                    // cartAddProduct;
+                    localStorage.setItem("product", JSON.stringify({ value }));
+                }}
+            >
                 <p className={styles.text}>{children}</p>
             </button>
         </>
