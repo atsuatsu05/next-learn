@@ -6,6 +6,7 @@ import {
     Container,
     DefinitionList,
     DefinitionItem,
+    Map,
 } from "@/components/final";
 
 export const metadata: Metadata = {
@@ -33,7 +34,7 @@ export default function Page() {
                         <DefinitionItem dt="tel">0224-12-3456</DefinitionItem>
                     </DefinitionList>
                 </Container>
-                <Text>アクセス</Text>
+                <Map />
             </Wrapper>
         </>
     );
