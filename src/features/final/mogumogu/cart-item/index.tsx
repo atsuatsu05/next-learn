@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.scss";
-import { DetailImage, Counter } from "@/components/final";
+import { Counter } from "@/components/final";
 
 export const CartItems: React.FC = () => {
     const price = 400;
@@ -38,7 +38,7 @@ export const CartItems: React.FC = () => {
                     <th scope="row" colSpan={2} className={styles.total}>
                         合計
                     </th>
-                    <td>¥999</td>
+                    <td>{total}</td>
                 </tr>
             </tfoot>
         </table>

@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
 import {
     Wrapper,
-    PageTitle,
     SectionTitle,
     PageButton,
     LinkText,
-    MenuItemBox,
-    CartItemTitle,
-    DetailImage,
 } from "@/components/final";
-import { CartItems } from "@/features/final/mogumogu/cart-items";
+import { CartItems } from "@/features/final/mogumogu/cart-item";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",

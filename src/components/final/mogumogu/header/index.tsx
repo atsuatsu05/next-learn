@@ -38,6 +38,11 @@ export const Header: React.FC<HeaderProps> = () => {
                 </div>
                 <ul>
                     <li className={styles.li}>
+                        <Link href="/final/mogumogu" className={styles.link}>
+                            Top
+                        </Link>
+                    </li>
+                    <li className={styles.li}>
                         <Link
                             href="/final/mogumogu/menu"
                             className={styles.link}

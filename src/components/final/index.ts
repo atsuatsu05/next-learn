@@ -25,3 +25,7 @@ export { CartButton } from "./mogumogu/cart-button";
 export { CartItemTitle } from "./mogumogu/cart-item-title";
 export { Counter } from "./mogumogu/counter";
 export { AboutText } from "./mogumogu/about-text";
+export { Map } from "./mogumogu/map";
+export { LinkBox } from "./mogumogu/link-box";
+export { TextRight } from "./mogumogu/text-right";
+export { Content } from "./mogumogu/content";

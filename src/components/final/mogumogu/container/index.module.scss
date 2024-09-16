@@ -6,6 +6,15 @@
         margin: 50px 0 0 0;
     }
 }
+.detail {
+    display: flex;
+    width: 80%;
+    margin: 100px auto 20px auto;
+    justify-content: center;
+    @include sp {
+        display: block;
+    }
+}
 
 .mypage {
     margin-bottom: 40px;

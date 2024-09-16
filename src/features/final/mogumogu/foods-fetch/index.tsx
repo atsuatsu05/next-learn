@@ -1,14 +1,11 @@
 import React from "react";
-import { client } from "@/libs/final/mogumogu/client";
 import {
     Container,
     DetailImage,
     DetailText,
-    Counter,
-    CartButton,
+    LinkBox,
 } from "@/components/final";
-
-type FoodsProps = {};
+import { getFoodsMenu } from "@/fetch/final/get-foods-menu";
 
 type Item = {
     id: string;
@@ -16,26 +13,27 @@ type Item = {
     image: {
         url: string;
     };
-    price: number;
+    price: string | number;
+    quantity: string | number;
 };
 
-export const Foods: React.FC<FoodsProps> = async () => {
-    const data = await client.get({
-        endpoint: "foods",
-    });
-    console.log(data.contents[0].image);
+export const Foods: React.FC = async () => {
+    const data = await getFoodsMenu();
+    console.log(data.contents[0]);
 
     return (
         <>
             {data.contents.map((item: Item) => (
-                <Container style={"item"} key={item.id}>
-                    <DetailImage src={item.image.url} alt={item.title} />
-                    <DetailText
-                        name={item.title}
-                        price={`¥${item.price}（税込）`}
-                    />
-                    <Counter />
-                    <CartButton>カートに追加</CartButton>
+                <Container style="item" key={item.id}>
+                    <LinkBox
+                        href={`/final/mogumogu/menu/detail/foods/${item.id}`}
+                    >
+                        <DetailImage src={item.image.url} alt={item.title} />
+                        <DetailText
+                            name={item.title}
+                            price={`¥${item.price}（税込）`}
+                        />
+                    </LinkBox>
                 </Container>
             ))}
         </>

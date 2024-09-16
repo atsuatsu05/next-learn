@@ -4,6 +4,8 @@
     text-align: center;
     @include sp {
         display: block;
+        width: 70%;
+        margin: 0 auto;
     }
 }
 .detail {

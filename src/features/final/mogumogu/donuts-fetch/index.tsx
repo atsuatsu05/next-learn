@@ -1,14 +1,11 @@
 import React from "react";
-import { client } from "@/libs/final/mogumogu/client";
 import {
     Container,
     DetailImage,
     DetailText,
-    CartButton,
-    Counter,
+    LinkBox,
 } from "@/components/final";
-
-type DonutsProps = {};
+import { getDonutsMenu } from "@/fetch/final/get-donuts-menu";
 
 type Item = {
     id: string;
@@ -17,32 +14,26 @@ type Item = {
         url: string;
     };
     price: string | number;
+    quantity: string | number;
 };
 
-export const Donuts: React.FC<DonutsProps> = async () => {
-    const data = await client.get({
-        endpoint: "donuts",
-    });
-    //ローカルストレージへの保存
-    // const CartAdd = localStorage.getItem("product");
-    // const ProductCartAdd = localStorage.setItem(
-    //     "product",
-    //     JSON.stringify(data.item),
-    // );
+export const Donuts: React.FC = async () => {
+    const data = await getDonutsMenu();
+    console.log(data.contents[0]);
 
     return (
         <>
             {data.contents.map((item: Item) => (
-                <Container style={"item"} key={item.id}>
-                    <DetailImage src={item.image.url} alt={item.title} />
-                    <DetailText
-                        name={item.title}
-                        price={`¥${item.price}（税込）`}
-                    />
-                    <Counter />
-                    <CartButton value={JSON.stringify(item)}>
-                        カートに追加
-                    </CartButton>
+                <Container style="item" key={item.id}>
+                    <LinkBox
+                        href={`/final/mogumogu/menu/detail/donuts//${item.id}`}
+                    >
+                        <DetailImage src={item.image.url} alt={item.title} />
+                        <DetailText
+                            name={item.title}
+                            price={`¥${item.price}（税込）`}
+                        />
+                    </LinkBox>
                 </Container>
             ))}
         </>

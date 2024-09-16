@@ -18,9 +18,8 @@
     margin: 0 auto;
 }
 .detail {
-    display: flex;
-    margin: 0 0 120px 0;
-    justify-content: center;
+    width: 80%;
+    margin: 100px auto;
     @include sp {
         flex-wrap: wrap;
     }
