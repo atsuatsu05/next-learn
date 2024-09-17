@@ -5,7 +5,6 @@ import {
     Wrapper,
     Section,
     SectionTitle,
-    Item,
     LinkText,
     AboutText,
     PageButton,

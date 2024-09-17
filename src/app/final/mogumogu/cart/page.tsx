@@ -6,6 +6,7 @@ import {
     LinkText,
 } from "@/components/final";
 import { CartItems } from "@/features/final/mogumogu/cart-item";
+import { UseRouter } from "@/features/final/mogumogu/detail/use-router";
 
 export const metadata: Metadata = {
     title: "cafe mogumogu",
@@ -19,10 +20,11 @@ export default function Page() {
                 <SectionTitle>Cart</SectionTitle>
                 <CartItems />
                 <PageButton>
-                    <LinkText href="/final/mogumogu">
+                    <LinkText href="/final/mogumogu/cart/complete">
                         注文内容を確定する
                     </LinkText>
                 </PageButton>
+                <UseRouter />
             </Wrapper>
         </>
     );

@@ -1,39 +1,31 @@
 "use client";
 import React, { useState } from "react";
-
 import styles from "./index.module.scss";
 
-export const Counter = () => {
-    // const [data, setData] = useState<{ quantity: number }>();
-    // useEffect(() => {
-    //     const getCounter = async () => {
-    //         const data = await client.get({
-    //             endpoint: "donuts",
-    //         });
-    //         setData(data);
-    //     };
-    //     getCounter();
-    // }, []);
+interface CounterProps {
+    initialQuantity?: number;
+    onQuantityChange: (quantity: number) => void; //引数として数量を受け取り、何も返さない
+}
 
-    // console.log(data);
-
-    const [count, setCount] = useState(1);
+export const Counter: React.FC<CounterProps> = ({
+    initialQuantity = 1,
+    onQuantityChange,
+}) => {
+    const [quantity, setQuantity] = useState(initialQuantity);
     const handleClickCountUp = () => {
-        if (count >= 10) {
-            setCount;
-        } else {
-            setCount((count) => count + 1);
+        if (quantity < 10) {
+            const newQuantity = quantity + 1;
+            setQuantity(newQuantity);
+            onQuantityChange(newQuantity);
         }
     };
     const handleClickCountDown = () => {
-        if (count <= 1) {
-            setCount;
-        } else {
-            setCount((count) => count - 1);
+        if (quantity > 1) {
+            const newQuantity = quantity - 1;
+            setQuantity(newQuantity);
+            onQuantityChange(newQuantity);
         }
     };
-    //ローカルストレージへの保存
-    const cartAddQuantity = localStorage.setItem("quantity", String(count));
 
     return (
         <>
@@ -42,7 +34,7 @@ export const Counter = () => {
                     ➖
                 </button>
 
-                <input className={styles.input} value={count} />
+                <span className={styles.input}>{quantity}</span>
 
                 <button onClick={handleClickCountUp} className={styles.btn}>
                     ➕

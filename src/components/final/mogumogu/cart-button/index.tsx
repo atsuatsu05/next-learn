@@ -2,25 +2,41 @@
 import React from "react"; //nodeモジュールから読んできている
 import styles from "./index.module.scss";
 
-type CartButtonProps = {
-    children: React.ReactNode;
-    value: string | number;
-    quantity: string | number;
-};
+//オブジェクトの型定義
+interface Product {
+    id: number;
+    title: string;
+    image: string;
+    price: number;
+}
+interface CartButtonProps {
+    children?: React.ReactNode;
+    product: Product;
+    quantity: number;
+}
 
 export const CartButton: React.FC<CartButtonProps> = ({
     children,
-    value,
+    product,
     quantity,
 }) => {
-    //カートへ追加ボタンを押したら、ローカルストレージへ保存される
-    const handleClick = () => {
-        localStorage.setItem("product", JSON.stringify({ value }));
-        localStorage.setItem("quantity", JSON.stringify({ quantity }));
+    const handleAddToCart = () => {
+        try {
+            const cartItems = JSON.parse(localStorage.getItem("cart") || "[]");
+            //商品情報と数量を合わせたオブジェクトを作成
+            const productWithQuantity = { ...product, quantity };
+            //カートに商品を追加
+            const updatedCartItems = [...cartItems, productWithQuantity];
+            //ローカルストレージに更新後のカートを保存
+            localStorage.setItem("cart", JSON.stringify(updatedCartItems));
+            alert("カートに追加しました");
+        } catch (error) {
+            console.error("カートへの追加中にエラーが発生しました：", error);
+        }
     };
     return (
         <>
-            <button className={styles.button} onClick={handleClick}>
+            <button className={styles.button} onClick={handleAddToCart}>
                 <p className={styles.text}>{children}</p>
             </button>
         </>
