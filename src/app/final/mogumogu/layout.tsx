@@ -15,7 +15,7 @@ export default function RootLayout({
         <html lang="ja">
             <body>
                 <Header />
-                <div>{children}</div>
+                <main>{children}</main>
                 <Footer copyright="© cafe mogumogu" />
             </body>
         </html>

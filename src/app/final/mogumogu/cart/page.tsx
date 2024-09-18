@@ -1,10 +1,5 @@
 import type { Metadata } from "next";
-import {
-    Wrapper,
-    SectionTitle,
-    PageButton,
-    LinkText,
-} from "@/components/final";
+import { Wrapper, SectionTitle } from "@/components/final";
 import { CartItems } from "@/features/final/mogumogu/cart-item";
 import { UseRouter } from "@/features/final/mogumogu/detail/use-router";
 
@@ -19,11 +14,6 @@ export default function Page() {
             <Wrapper style={"cart"}>
                 <SectionTitle>Cart</SectionTitle>
                 <CartItems />
-                <PageButton>
-                    <LinkText href="/final/mogumogu/cart/complete">
-                        注文内容を確定する
-                    </LinkText>
-                </PageButton>
                 <UseRouter />
             </Wrapper>
         </>

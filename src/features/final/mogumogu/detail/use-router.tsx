@@ -11,7 +11,7 @@ export const UseRouter: React.FC = () => {
     return (
         <>
             <Link href="" onClick={() => router.back()} className={styles.link}>
-                <p>前の画面へ戻る</p>
+                <p className={styles.p}>前の画面へ戻る</p>
             </Link>
         </>
     );

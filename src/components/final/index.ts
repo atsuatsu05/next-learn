@@ -29,3 +29,4 @@ export { Map } from "./mogumogu/map";
 export { LinkBox } from "./mogumogu/link-box";
 export { TextRight } from "./mogumogu/text-right";
 export { Content } from "./mogumogu/content";
+export { DeleteButton } from "./mogumogu/delete-button";
