@@ -21,15 +21,15 @@ export default function Page() {
         <>
             <Wrapper style={"menu"}>
                 <PageTitle>Menu</PageTitle>
-                <MenuTitle>Donuts</MenuTitle>
+                <MenuTitle id={"donuts"}>Donuts</MenuTitle>
                 <MenuItemBox>
                     <Donuts />
                 </MenuItemBox>
-                <MenuTitle>Foods</MenuTitle>
+                <MenuTitle id={"foods"}>Foods</MenuTitle>
                 <MenuItemBox>
                     <Foods />
                 </MenuItemBox>
-                <MenuTitle>Drink</MenuTitle>
+                <MenuTitle id={"drink"}>Drink</MenuTitle>
                 <MenuItemBox>
                     <Drink />
                 </MenuItemBox>

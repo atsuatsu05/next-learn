@@ -11,7 +11,7 @@ export default function Page() {
         <>
             <Wrapper style={"cart"}>
                 <SectionTitle>Cart</SectionTitle>
-                <Text>ご注文ありがとうございました。</Text>
+                <Text style="complete">ご注文ありがとうございました！</Text>
                 <LinkText href="/final/mogumogu/">Back to Home</LinkText>
             </Wrapper>
         </>

@@ -2,9 +2,7 @@ import React from "react";
 import { client } from "@/libs/final/mogumogu/client";
 import { Item } from "@/components/final";
 
-type DrinkTopProps = {};
-
-export const DrinkTop: React.FC<DrinkTopProps> = async () => {
+export const DrinkTop: React.FC = async () => {
     const data = await client.get({
         endpoint: "drink",
     });
@@ -14,7 +12,7 @@ export const DrinkTop: React.FC<DrinkTopProps> = async () => {
         <Item
             itemTitle="drink"
             image={data.contents[1].image.url}
-            href="/final/mogumogu/menu"
+            href="/final/mogumogu/menu/#drink"
         ></Item>
     );
 };

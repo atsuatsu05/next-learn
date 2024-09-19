@@ -3,7 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./index.module.scss";
-import { HeaderIcon } from "../header-icon";
+// import { TextButton, HeaderIcon, LinkText } from "@/components/final/index";
+import { HeaderCartCount } from "@/features/final/mogumogu/header-cart-count";
 type HeaderProps = {
     children?: React.ReactNode;
 };
@@ -24,18 +25,7 @@ export const Header: React.FC<HeaderProps> = () => {
             </h1>
 
             <div className={styles.navList}>
-                <div className={styles.headerIcon}>
-                    <HeaderIcon
-                        src={"/final/mogumogu/cart_icon.png"}
-                        alt="カート"
-                        href={"/final/mogumogu/cart"}
-                    />
-                    <HeaderIcon
-                        src={"/final/mogumogu/mypage_icon.png"}
-                        alt="マイページ"
-                        href={"/final/mogumogu/my-page"}
-                    />
-                </div>
+                <HeaderCartCount />
                 <ul>
                     <li className={styles.li}>
                         <Link href="/final/mogumogu" className={styles.link}>

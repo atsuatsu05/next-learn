@@ -2,9 +2,7 @@ import React from "react";
 import { client } from "@/libs/final/mogumogu/client";
 import { Item } from "@/components/final";
 
-type FoodsTopProps = {};
-
-export const FoodsTop: React.FC<FoodsTopProps> = async () => {
+export const FoodsTop: React.FC = async () => {
     const data = await client.get({
         endpoint: "foods",
     });
@@ -14,7 +12,7 @@ export const FoodsTop: React.FC<FoodsTopProps> = async () => {
         <Item
             itemTitle="foods"
             image={data.contents[2].image.url}
-            href="/final/mogumogu/menu"
+            href="/final/mogumogu/menu/#foods"
         ></Item>
     );
 };

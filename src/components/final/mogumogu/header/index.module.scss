@@ -12,6 +12,10 @@
     list-style: none;
     padding: 10px;
     color: #454545;
+    :hover {
+        text-decoration: underline;
+        opacity: 0.7;
+    }
 }
 .navList {
     width: 100%;

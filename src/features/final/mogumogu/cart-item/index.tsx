@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import {
@@ -7,6 +8,7 @@ import {
     PageButton,
     LinkText,
     DeleteButton,
+    TextButton,
 } from "@/components/final";
 
 interface CartItem {
@@ -23,6 +25,7 @@ export const CartItems: React.FC = () => {
     //カートに追加した商品情報を取得する
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [totalPrice, setTotalPrice] = useState<number>(0);
+    const router = useRouter();
 
     //ローカルストレージからカートの情報を取得
     useEffect(() => {
@@ -65,7 +68,13 @@ export const CartItems: React.FC = () => {
         setCartItems([]);
         localStorage.removeItem("cart");
         setTotalPrice(0);
-        alert("カートの中身を全て削除いたします。よろしいですか？");
+    };
+
+    //注文を確定した時の処理
+    const handleConfirmOrder = () => {
+        console.log("注文内容", cartItems);
+        router.push("/final/mogumogu/cart/complete");
+        handleClearCart();
     };
 
     return (
@@ -133,7 +142,7 @@ export const CartItems: React.FC = () => {
                             </tr>
                         </tfoot>
                     </table>
-                    <PageButton>
+                    <PageButton onConfirmOrder={handleConfirmOrder}>
                         <LinkText href="/final/mogumogu/cart/complete">
                             注文を確定する
                         </LinkText>
@@ -141,6 +150,11 @@ export const CartItems: React.FC = () => {
                     <DeleteButton onDelete={handleClearCart}>
                         カートを空にする
                     </DeleteButton>
+                    <TextButton>
+                        <LinkText href="/final/mogumogu/menu">
+                            買い物を続ける
+                        </LinkText>
+                    </TextButton>
                 </>
             ) : (
                 <>

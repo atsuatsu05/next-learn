@@ -11,7 +11,7 @@ type LinkTextProps = {
 export const LinkText: React.FC<LinkTextProps> = ({ children, href }) => {
     return (
         <Link href={href} className={styles.link}>
-            {children}
+            <p>{children}</p>
         </Link>
     );
 };

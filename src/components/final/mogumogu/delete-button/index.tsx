@@ -10,8 +10,10 @@ export const DeleteButton: React.FC<DeleteButtonProps> = ({
     onDelete,
 }) => {
     return (
-        <button onClick={onDelete} className={styles.text}>
-            {children}
-        </button>
+        <div className={styles.div}>
+            <button onClick={onDelete} className={styles.text}>
+                {children}
+            </button>
+        </div>
     );
 };
