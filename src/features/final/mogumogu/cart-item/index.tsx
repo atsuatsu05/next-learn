@@ -91,6 +91,7 @@ export const CartItems: React.FC = () => {
 
     return (
         <>
+            {/*カートに追加されていたら表示させる */}
             {cartItems.length > 0 ? (
                 <>
                     <table className={styles.table}>
@@ -101,8 +102,6 @@ export const CartItems: React.FC = () => {
                                 <th>金額</th>
                             </tr>
                         </thead>
-                        {/*カートに追加されていたら表示させる */}
-
                         <tbody>
                             {cartItems.map((item) => (
                                 <tr key={item.id}>
@@ -169,6 +168,7 @@ export const CartItems: React.FC = () => {
                     </TextButton>
                 </>
             ) : (
+                // カートに何も入っていなかったら
                 <>
                     <p className={styles.text}>カートに商品がありません</p>
                     <LinkText href="/final/mogumogu/menu">

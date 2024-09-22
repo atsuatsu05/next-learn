@@ -15,5 +15,12 @@ export const Default: Story = {
     args: {
         //読み込んだコンポーネントのPropsと連携している
         children: "テキスト",
+        product: {
+            id: 1,
+            title: "タイトル",
+            image: "商品画像",
+            price: 999,
+        },
+        quantity: 1,
     },
 };

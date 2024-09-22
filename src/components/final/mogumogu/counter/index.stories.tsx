@@ -12,5 +12,9 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
     // propsに設定する値
-    args: {},
+    args: {
+        initialQuantity: 0,
+        onQuantityChange: (quantity) =>
+            console.log("Quantity changed", quantity),
+    },
 };

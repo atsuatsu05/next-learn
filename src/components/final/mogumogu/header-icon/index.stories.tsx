@@ -15,7 +15,7 @@ export const Default: Story = {
     // propsに設定する値
     args: {
         children: "テキスト",
-        src: "画像のソース",
+        src: "/final/mogumogu/cart_icon.png",
         alt: "テキスト",
         href: "URL",
     },

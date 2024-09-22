@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import {
     Wrapper,
-    Text,
     PageTitle,
     Container,
     DefinitionList,

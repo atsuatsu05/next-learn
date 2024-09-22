@@ -4,7 +4,6 @@ import styles from "./index.module.scss";
 type ContainerProps = {
     children?: React.ReactNode;
     style: "item" | "detail" | "mypage" | "company" | "container";
-    href?: string;
 };
 
 export const Container: React.FC<ContainerProps> = ({ children, style }) => {

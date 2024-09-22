@@ -15,5 +15,6 @@ export const Default: Story = {
     // propsに設定する値
     args: {
         children: "コンテンツ",
+        style: "company",
     },
 };

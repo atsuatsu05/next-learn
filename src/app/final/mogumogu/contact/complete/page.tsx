@@ -11,7 +11,7 @@ export default function Page() {
         <>
             <Wrapper style={"complete"}>
                 <SectionTitle>Contact</SectionTitle>
-                <Text style="complete">お問い合わせありがとうございます。</Text>
+                <Text style="complete">お問い合わせを受け付けました。</Text>
                 <LinkText href="/final/mogumogu/">Back to Home</LinkText>
             </Wrapper>
         </>

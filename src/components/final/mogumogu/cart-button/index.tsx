@@ -30,7 +30,7 @@ export const CartButton: React.FC<CartButtonProps> = ({
             //ローカルストレージに更新後のカートを保存
             localStorage.setItem("cart", JSON.stringify(updatedCartItems));
             alert("カートに追加しました");
-            //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+            //カート更新のカスタムイベントを発火させ、カートアイコンのアイテム数を更新
             const event = new CustomEvent("cartUpdated");
             window.dispatchEvent(event);
         } catch (error) {

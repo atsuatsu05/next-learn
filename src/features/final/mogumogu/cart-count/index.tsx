@@ -23,7 +23,7 @@ export const CartCount: React.FC = () => {
             updateCartCount();
 
             const handleCartUpdated = () => updateCartCount();
-            //カスタムイベントをリッスン
+            //カスタムイベントを受け取る
             window.addEventListener("cartUpdated", handleCartUpdated);
 
             return () => {

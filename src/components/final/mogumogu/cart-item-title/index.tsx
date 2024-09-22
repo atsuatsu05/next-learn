@@ -5,7 +5,7 @@ type CartItemTitleProps = {
     children?: React.ReactNode;
 };
 
-export const CartItemTitle: React.FC<CartItemTitleProps> = ({ children }) => {
+export const CartItemTitle: React.FC<CartItemTitleProps> = () => {
     return (
         <div className={styles.cartTitle}>
             <p>商品</p>
