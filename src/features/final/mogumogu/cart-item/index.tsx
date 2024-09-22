@@ -54,6 +54,9 @@ export const CartItems: React.FC = () => {
             0,
         );
         setTotalPrice(total);
+        //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+        const event = new CustomEvent("cartUpdated");
+        window.dispatchEvent(event);
     };
 
     //商品ごとのカートからの削除処理
@@ -61,6 +64,9 @@ export const CartItems: React.FC = () => {
         const updatedCartItems = cartItems.filter((item) => item.id !== id); //選択したid以外のもので新たに配列を作る
         setCartItems(updatedCartItems);
         localStorage.setItem("cart", JSON.stringify(updatedCartItems));
+        //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+        const event = new CustomEvent("cartUpdated");
+        window.dispatchEvent(event);
     };
 
     //カートを空にする処理
@@ -68,6 +74,9 @@ export const CartItems: React.FC = () => {
         setCartItems([]);
         localStorage.removeItem("cart");
         setTotalPrice(0);
+        //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+        const event = new CustomEvent("cartUpdated");
+        window.dispatchEvent(event);
     };
 
     //注文を確定した時の処理
@@ -75,6 +84,9 @@ export const CartItems: React.FC = () => {
         console.log("注文内容", cartItems);
         router.push("/final/mogumogu/cart/complete");
         handleClearCart();
+        //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+        const event = new CustomEvent("cartUpdated");
+        window.dispatchEvent(event);
     };
 
     return (

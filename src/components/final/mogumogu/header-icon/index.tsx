@@ -10,16 +10,24 @@ type HeaderIconProps = {
     href: string;
 };
 
-export const HeaderIcon: React.FC<HeaderIconProps> = ({ src, alt, href }) => {
+export const HeaderIcon: React.FC<HeaderIconProps> = ({
+    children,
+    src,
+    alt,
+    href,
+}) => {
     return (
-        <Link href={href} className={styles.link}>
-            <Image
-                src={src}
-                width={20}
-                height={20}
-                alt={alt}
-                className={styles.icon}
-            />
-        </Link>
+        <div>
+            <Link href={href} className={styles.link}>
+                <Image
+                    src={src}
+                    width={20}
+                    height={20}
+                    alt={alt}
+                    className={styles.icon}
+                />
+                {children}
+            </Link>
+        </div>
     );
 };
