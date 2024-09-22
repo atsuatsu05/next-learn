@@ -6,43 +6,29 @@
         width: 100%;
     }
 }
+
 .submitArea {
-    width: 60%;
-    @include sp {
-        width: 100%;
-    }
-}
-.submit {
-    display: block;
-    margin: 40px auto 0 auto;
-    color: #fff;
-    background: #000;
-    border: none;
-    width: 144px;
-    height: 32px;
-    cursor: pointer;
+    margin-top: 40px;
 }
 
-.textField {
+.submit {
     display: block;
-    width: 60%;
-    margin: 10px 0;
-    padding: 3px;
-    @include sp {
-        width: 100%;
-    }
+    background: none;
+    margin: 10px auto;
+    border: none;
+    cursor: pointer;
 }
 
 //エラーだった場合
 .error {
-    color: #ff5050;
+    color: #fe6868;
 }
 .errorTextField {
     display: block;
     width: 60%;
     margin: 10px 0;
     padding: 3px;
-    border: solid 1px #ff5050;
+    border: solid 1px #fe6868;
     background-color: #ffdddd;
 
     @include sp {

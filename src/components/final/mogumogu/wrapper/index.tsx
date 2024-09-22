@@ -10,7 +10,7 @@ type WrapperProps = {
         | "company"
         | "contact"
         | "cart"
-        | "mypage";
+        | "complete";
 };
 
 export const Wrapper: React.FC<WrapperProps> = ({ children, style }) => {

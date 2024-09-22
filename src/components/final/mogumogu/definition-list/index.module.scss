@@ -7,7 +7,7 @@
     border-bottom: solid 1px #ccc;
     margin: 0;
     padding: 20px 0;
-    width: 60%;
+    width: 100%;
 }
 .dt {
     @include sp {
@@ -17,5 +17,8 @@
     font-weight: normal;
 }
 .dd {
-    margin: 0;
+    margin-left: 80px;
+    @include sp {
+        margin: 0;
+    }
 }
