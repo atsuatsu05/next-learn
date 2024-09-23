@@ -42,10 +42,10 @@ export const Header: React.FC<HeaderProps> = () => {
                     </li>
                     <li className={styles.li}>
                         <Link
-                            href="/final/mogumogu/company"
+                            href="/final/mogumogu/shop"
                             className={styles.link}
                         >
-                            Company
+                            Shop
                         </Link>
                     </li>
                     <li className={styles.li}>

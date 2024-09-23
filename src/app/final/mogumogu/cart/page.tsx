@@ -3,7 +3,7 @@ import { Wrapper, SectionTitle } from "@/components/final";
 import { CartItems } from "@/features/final/mogumogu/cart-item";
 
 export const metadata: Metadata = {
-    title: "cafe mogumogu",
+    title: "Cart | cafe mogumogu",
     description: "カートの中身",
 };
 

@@ -13,8 +13,8 @@ import { FoodsTop } from "@/features/final/mogumogu/foods-top-fetch ";
 import { DrinkTop } from "@/features/final/mogumogu/drink-top-fetch ";
 
 export const metadata: Metadata = {
-    title: "cafe mogumogu",
-    description: "cafe mogumoguのTOPページ",
+    title: "Top | cafe mogumogu",
+    description: "cafe mogumoguのTopページ",
 };
 
 export default function Page() {

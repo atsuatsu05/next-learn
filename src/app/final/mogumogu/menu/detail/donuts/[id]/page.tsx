@@ -4,7 +4,7 @@ import { getDonutsFetch } from "@/fetch/final/get-donuts-detail";
 import { AddToCart } from "@/features/final/mogumogu/detail/add-to-cart";
 
 export const metadata: Metadata = {
-    title: "商品の詳細ページ",
+    title: "Donuts | cafe mogumogu",
     description: "cafemogumoguのDetailページ",
 };
 

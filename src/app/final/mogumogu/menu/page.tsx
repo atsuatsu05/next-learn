@@ -12,7 +12,7 @@ import { Foods } from "@/features/final/mogumogu/foods-fetch";
 import { Drink } from "@/features/final/mogumogu/drinks-fetch";
 
 export const metadata: Metadata = {
-    title: "cafe mogumogu",
+    title: "Menu | cafe mogumogu",
     description: "cafe mogumoguのMenuページ",
 };
 

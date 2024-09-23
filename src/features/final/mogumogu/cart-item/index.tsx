@@ -64,6 +64,13 @@ export const CartItems: React.FC = () => {
         const updatedCartItems = cartItems.filter((item) => item.id !== id); //選択したid以外のもので新たに配列を作る
         setCartItems(updatedCartItems);
         localStorage.setItem("cart", JSON.stringify(updatedCartItems));
+        //数量の変更に合わせて合計金額の再計算
+        const total = updatedCartItems.reduce(
+            (sum, item) => sum + item.price * item.quantity,
+            0,
+        );
+        setTotalPrice(total);
+
         //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
         const event = new CustomEvent("cartUpdated");
         window.dispatchEvent(event);

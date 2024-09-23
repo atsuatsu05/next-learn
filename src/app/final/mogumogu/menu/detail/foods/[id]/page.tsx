@@ -4,7 +4,7 @@ import { getFoodsFetch } from "@/fetch/final/get-foods-detail";
 import { AddToCart } from "@/features/final/mogumogu/detail/add-to-cart";
 
 export const metadata: Metadata = {
-    title: "商品の詳細ページ",
+    title: "Foods | cafe mogumogu",
     description: "cafemogumoguのDetailページ",
 };
 
