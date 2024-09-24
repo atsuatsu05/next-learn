@@ -10,8 +10,10 @@ type LinkTextProps = {
 
 export const LinkText: React.FC<LinkTextProps> = ({ children, href }) => {
     return (
-        <Link href={href} className={styles.link}>
-            <p>{children}</p>
-        </Link>
+        <div className={styles.div}>
+            <Link href={href} className={styles.link}>
+                {children}
+            </Link>
+        </div>
     );
 };

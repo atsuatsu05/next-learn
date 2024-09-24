@@ -1,8 +1,11 @@
-.link {
-    display: block;
-    text-decoration: none;
-    color: #333;
+.div {
+    text-align: center;
+    margin: 15px 0;
     :hover {
         opacity: 0.7;
     }
+}
+.link {
+    text-decoration: none;
+    color: #333;
 }
