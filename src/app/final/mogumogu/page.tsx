@@ -9,8 +9,8 @@ import {
     PageButton,
 } from "@/components/final";
 import { DonutsTop } from "@/features/final/mogumogu/donuts-top-fetch";
-import { FoodsTop } from "@/features/final/mogumogu/foods-top-fetch ";
-import { DrinkTop } from "@/features/final/mogumogu/drink-top-fetch ";
+import { FoodsTop } from "@/features/final/mogumogu/foods-top-fetch";
+import { DrinkTop } from "@/features/final/mogumogu/drink-top-fetch";
 
 export const metadata: Metadata = {
     title: "Top | cafe mogumogu",
