@@ -24,7 +24,6 @@ export default function Page() {
                 <MainImage src={"/final/mogumogu/main_visual.jpg"} />
                 <SectionTitle>cafe mogumogu</SectionTitle>
                 <AboutText />
-
                 <SectionTitle>menu</SectionTitle>
                 <Section style={"menu"}>
                     <DonutsTop />
