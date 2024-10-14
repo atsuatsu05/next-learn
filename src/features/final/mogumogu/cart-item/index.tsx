@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import {
@@ -25,7 +25,7 @@ export const CartItems: React.FC = () => {
     //カートに追加した商品情報を取得する
     const [cartItems, setCartItems] = useState<CartItem[]>([]);
     const [totalPrice, setTotalPrice] = useState<number>(0);
-    const router = useRouter();
+    // const router = useRouter();
 
     //ローカルストレージからカートの情報を取得
     useEffect(() => {
@@ -87,14 +87,14 @@ export const CartItems: React.FC = () => {
     };
 
     //注文を確定した時の処理
-    const handleConfirmOrder = () => {
-        console.log("注文内容", cartItems);
-        router.push("/final/mogumogu/cart/complete");
-        handleClearCart();
-        //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
-        const event = new CustomEvent("cartUpdated");
-        window.dispatchEvent(event);
-    };
+    // const handleConfirmOrder = () => {
+    //     console.log("注文内容", cartItems);
+    //     router.push("/final/mogumogu/cart/payment");
+    //     handleClearCart();
+    //カート更新のカスタムイベントを発火させ、カートアイコンにアイテムのアイテム数を更新させる
+    // const event = new CustomEvent("cartUpdated");
+    // window.dispatchEvent(event);
+    // };
 
     return (
         <>
@@ -160,9 +160,9 @@ export const CartItems: React.FC = () => {
                             </tr>
                         </tfoot>
                     </table>
-                    <PageButton onConfirmOrder={handleConfirmOrder}>
-                        <LinkText href="/final/mogumogu/cart/complete">
-                            注文を確定する
+                    <PageButton>
+                        <LinkText href="/final/mogumogu/cart/payment">
+                            お支払い方法の選択
                         </LinkText>
                     </PageButton>
                     <DeleteButton onDelete={handleClearCart}>
