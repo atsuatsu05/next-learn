@@ -25,7 +25,6 @@ export default function Page() {
                 <br />
                 テキストテキストテキストテキストテキストテキストテキスト
             </Text>
-
             <Title>Products</Title>
             <Wrapper style="topProducts">
                 <ProductsFetch />
