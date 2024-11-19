@@ -30,3 +30,4 @@ export { TextRight } from "./mogumogu/text-right";
 export { Content } from "./mogumogu/content";
 export { DeleteButton } from "./mogumogu/delete-button";
 export { TextButton } from "./mogumogu/text-button";
+export { Payment } from "./mogumogu/payment";

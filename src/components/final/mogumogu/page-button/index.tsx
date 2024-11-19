@@ -4,6 +4,7 @@ import styles from "./index.module.scss";
 type PageButtonProps = {
     children: React.ReactNode;
     onConfirmOrder?: () => void;
+    onClick?: () => void;
 };
 
 export const PageButton: React.FC<PageButtonProps> = ({
