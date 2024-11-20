@@ -1,6 +1,9 @@
 .header {
     display: flex;
-    margin: 10px;
+    position: sticky;
+    padding: 10px;
+    top: 0; /* 上からの距離を指定 */
+    z-index: 1000; /* 他の要素より前面に表示 */
 }
 .logo {
     text-decoration: none;

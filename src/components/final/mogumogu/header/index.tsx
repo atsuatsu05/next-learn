@@ -16,8 +16,8 @@ export const Header: React.FC<HeaderProps> = () => {
                 <Link className={styles.logo} href="/final/mogumogu">
                     <Image
                         src="/final/mogumogu/logo.png"
-                        width={240}
-                        height={240}
+                        width={180}
+                        height={180}
                         alt="cafe mogumogu"
                         priority
                     />
