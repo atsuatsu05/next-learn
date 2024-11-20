@@ -9,6 +9,16 @@
     text-decoration: none;
     color: #000;
     text-align: left;
+    animation: rotation 12s linear infinite;
+    height: 100%;
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg); /* 初期角度 */
+    }
+    to {
+        transform: rotate(360deg); /* 一周回転 */
+    }
 }
 
 .li {
