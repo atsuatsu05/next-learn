@@ -30,11 +30,10 @@ export default function Page() {
                     <FoodsTop />
                     <DrinkTop />
                 </Section>
-                <PageButton>
-                    <LinkText href={"/final/mogumogu/menu/"}>
-                        View more
-                    </LinkText>
-                </PageButton>
+
+                <LinkText href={"/final/mogumogu/menu/"}>
+                    <PageButton>View more</PageButton>
+                </LinkText>
             </Wrapper>
         </>
     );

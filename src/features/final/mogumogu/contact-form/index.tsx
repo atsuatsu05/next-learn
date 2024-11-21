@@ -4,7 +4,7 @@ import styles from "./styles.module.scss";
 import { useForm } from "react-hook-form";
 import { useRouter } from "next/navigation";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { PageButton, LinkText, Wrapper } from "@/components/final";
+import { PageButton, Wrapper } from "@/components/final";
 
 import {
     contactFormSchema,
@@ -91,9 +91,7 @@ export const ContactForm: React.FC = () => {
                         </div>
                     )}
                     <div className={styles.submitArea}>
-                        <PageButton>
-                            <button className={styles.submit}>送信</button>
-                        </PageButton>
+                        <PageButton>送信</PageButton>
                     </div>
                 </form>
             </Wrapper>

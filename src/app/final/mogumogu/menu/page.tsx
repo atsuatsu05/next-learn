@@ -33,11 +33,10 @@ export default function Page() {
                 <MenuItemBox>
                     <Drink />
                 </MenuItemBox>
-                <PageButton>
-                    <LinkText href="/final/mogumogu/cart">
-                        カートの中身を見る
-                    </LinkText>
-                </PageButton>
+
+                <LinkText href="/final/mogumogu/cart">
+                    <PageButton>カートの中身を見る</PageButton>
+                </LinkText>
             </Wrapper>
         </>
     );

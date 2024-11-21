@@ -4,7 +4,6 @@ import styles from "./index.module.scss";
 type PageButtonProps = {
     children: React.ReactNode;
     onConfirmOrder?: () => void;
-    onClick?: () => void;
 };
 
 export const PageButton: React.FC<PageButtonProps> = ({
@@ -13,9 +12,9 @@ export const PageButton: React.FC<PageButtonProps> = ({
 }) => {
     return (
         <>
-            <div onClick={onConfirmOrder} className={styles.button}>
+            <button onClick={onConfirmOrder} className={styles.button}>
                 {children}
-            </div>
+            </button>
         </>
     );
 };

@@ -160,11 +160,11 @@ export const CartItems: React.FC = () => {
                             </tr>
                         </tfoot>
                     </table>
-                    <PageButton>
-                        <LinkText href="/final/mogumogu/cart/payment">
-                            お支払い方法の選択
-                        </LinkText>
-                    </PageButton>
+
+                    <LinkText href="/final/mogumogu/cart/payment">
+                        <PageButton>お支払い方法の選択</PageButton>
+                    </LinkText>
+
                     <DeleteButton onDelete={handleClearCart}>
                         カートを空にする
                     </DeleteButton>
