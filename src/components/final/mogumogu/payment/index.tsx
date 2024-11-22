@@ -1,19 +1,17 @@
 "use client";
 import styles from "./index.module.scss";
 import { useRouter } from "next/navigation";
-import { PageButton } from "../page-button";
-
 export const Payment = () => {
     const { push } = useRouter();
     return (
         <>
             <div className={styles.align}>
                 <h3>Stripe Test購入画面</h3>
-                <PageButton
+                <button
                     // className={styles.align}
                     onClick={async () => {
                         const response = await fetch(
-                            "/fetch/final/checkout-api",
+                            "/src/app/api/final/checkout-api.ts",
                             {
                                 method: "post",
                                 headers: {
@@ -29,7 +27,7 @@ export const Payment = () => {
                     }}
                 >
                     入力画面へ
-                </PageButton>
+                </button>
             </div>
         </>
     );
