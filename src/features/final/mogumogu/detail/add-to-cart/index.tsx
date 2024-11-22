@@ -58,11 +58,9 @@ export const AddToCart: React.FC<AddToCartProps> = ({
                     </CartButton>
                 </TextRight>
             </Container>
-            <PageButton>
-                <LinkText href={"/final/mogumogu/cart"}>
-                    注文内容の確認へ
-                </LinkText>
-            </PageButton>
+            <LinkText href={"/final/mogumogu/cart"}>
+                <PageButton>注文内容の確認へ</PageButton>
+            </LinkText>
             <UseRouter />
         </>
     );
