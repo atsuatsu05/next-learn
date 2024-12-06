@@ -11,7 +11,7 @@ export const Payment = () => {
                     // className={styles.align}
                     onClick={async () => {
                         const response = await fetch(
-                            "/src/app/api/final/checkout-api.ts",
+                            "/api/final/checkout-api",
                             {
                                 method: "post",
                                 headers: {
